@@ -1,6 +1,6 @@
 {
     "index_patterns": [
-        "snowcrash*"
+        "pcapmonkey*"
     ],
     "settings": {
         "number_of_shards": 1,

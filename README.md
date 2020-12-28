@@ -1,8 +1,8 @@
-# snowcrash
-Snowcrash is a project that will provide an easy way to analyze pcap using the latest version of Suricata and Zeek.
+# pcapmonkey
+Pcapmonkey is a project that will provide an easy way to analyze pcap using the latest version of Suricata and Zeek.
 It can also save Suricata and Zeek logs in Elasticsearch using the new Elasticsearch Common Schema or the original field names.
 
-snowcrash uses default docker container for most images and aims to be easy and straightforward to use.
+pcapmonkey uses default docker container for most images and aims to be easy and straightforward to use.
 
 # Install & uninstall
 Install Docker-CE and docker-compose:
@@ -43,19 +43,19 @@ Kibana and elasticsearch could take a couple of minutes to start. You can monito
 When everything is up and runnning you can go to http://localhost:5601 to open Kibana web interface.
 At the first access you should see the following screen:
 
-![Kibana first access](https://github.com/certego/snowcrash/raw/master/images/kibana_first_access.png)
+![Kibana first access](https://github.com/certego/pcapmonkey/raw/master/images/kibana_first_access.png)
 
 Click **"Explore on my own"** to close the window.
 
 Now we can import the panoptikon index patterns, they will be used to access our pcap data. To do so click the Managment icon (the cog):
 
-![Kibana cog](https://github.com/certego/snowcrash/raw/master/images/kibana_managment.png)
+![Kibana cog](https://github.com/certego/pcapmonkey/raw/master/images/kibana_managment.png)
 
 Than click "Saved object":
 
-![Saved Object](https://github.com/certego/snowcrash/raw/master/images/kibana_saved_object.png)
+![Saved Object](https://github.com/certego/pcapmonkey/raw/master/images/kibana_saved_object.png)
 
-Than open the Import dialog and import `kibana.ndjson` file from this repository. Now going back in Kibana discover you should see two index pattern called `snowcrash*` and `snowcrash_original_ts*`.
+Than open the Import dialog and import `kibana.ndjson` file from this repository. Now going back in Kibana discover you should see two index pattern called `pcapmonkey*` and `pcapmonkey_original_ts*`.
 
 
 ## Managing suricata Signatures
@@ -80,11 +80,11 @@ sudo docker-compose up zeek suricata
 The containers will print the output on the console and exit when they finish processing the pcap.
 You can see the results on Kibana: http://localhost:5601
 
-In Kibana there are two index patterns: `snowcrash*` and `snowcrash_original_ts*` you can select those from the drop down menu:
+In Kibana there are two index patterns: `pcapmonkey*` and `pcapmonkey_original_ts*` you can select those from the drop down menu:
 
-![Kibana index pattern dropdown](https://github.com/certego/snowcrash/raw/master/images/kibana_indexpattern_dropdown.png)
+![Kibana index pattern dropdown](https://github.com/certego/pcapmonkey/raw/master/images/kibana_indexpattern_dropdown.png)
 
-You can see both zeek and suricata logs from these index patterns. `snowcrash*` uses the default timestamp field (`@timestamp`) to show logs. That means logs data are indexes when they are read. The original pcap time is saved in the `timestamp` field.
+You can see both zeek and suricata logs from these index patterns. `pcapmonkey*` uses the default timestamp field (`@timestamp`) to show logs. That means logs data are indexes when they are read. The original pcap time is saved in the `timestamp` field.
 
 Meanwhile `pcapotikon_original_ts*` uses the original pcap time as default timestamp so you can see the real timeline. Kibana, by default, shows the last 15 minuts of data, so if you are analyzing old pcaps remember to widens the search timewindows using the menu on the top right of the page.
 

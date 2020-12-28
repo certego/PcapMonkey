@@ -7,7 +7,7 @@ services:
         image: docker.elastic.co/elasticsearch/elasticsearch:7.9.2
         hostname: elasticsearch
         environment: 
-            - node.name=snowcrash
+            - node.name=pcapmonkey
             - bootstrap.memory_lock=true
             - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
             - discovery.type=single-node
