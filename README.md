@@ -1,4 +1,4 @@
-# pcapmonkey
+# Pcapmonkey
 Pcapmonkey is a project that will provide an easy way to analyze pcap using the latest version of Suricata and Zeek.
 It can also save Suricata and Zeek logs in Elasticsearch using the new Elasticsearch Common Schema or the original field names.
 
