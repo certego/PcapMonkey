@@ -1,0 +1,61 @@
+{
+    "index_patterns": [
+        "snowcrash*"
+    ],
+    "settings": {
+        "number_of_shards": 1,
+        "number_of_replicas": 0,
+        "refresh_interval": "5s",
+        "index.max_docvalue_fields_search": "200",
+        "index.mapping.ignore_malformed": true
+    },
+    "mappings": {
+        "properties": {
+            "@timestamp": {
+                "type": "date"
+            },
+            "timestamp": {
+                "type": "date"
+            },
+            "tags": {
+                "type": "keyword"
+            },
+            "src_ip": {
+                "type": "ip"
+            },
+            "dest_ip": {
+                "type": "ip"
+            },
+            "id": {
+                "properties": {
+                    "origin_h": {
+                        "type": "ip"
+                    },
+                    "resp_h": {
+                        "type": "ip"
+                    }
+                }
+            }
+        },
+        "dynamic_templates": [
+            {
+                "strings_as_keywords": {
+                    "match_mapping_type": "string",
+                    "mapping": {
+                        "type": "keyword",
+                        "norms": false
+                    }
+                }
+            },
+            {
+                "unindexed_doubles": {
+                    "match_mapping_type": "double",
+                    "mapping": {
+                        "type": "float",
+                        "index": false
+                    }
+                }
+            }
+        ]
+    }
+}

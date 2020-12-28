@@ -1,0 +1,6 @@
+{"ts":1600121927.761748,"uid":"CJJfWG10WfAmPTS2Pj","id.orig_h":"10.9.14.101","id.orig_p":49285,"id.resp_h":"51.38.124.206","id.resp_p":80,"proto":"tcp","analyzer":"HTTP","failure_reason":"not a http request line"}
+{"ts":1600122177.252591,"uid":"C4KFDlDD9G1r1uFA1","id.orig_h":"10.9.14.101","id.orig_p":49290,"id.resp_h":"51.38.124.206","id.resp_p":80,"proto":"tcp","analyzer":"HTTP","failure_reason":"not a http request line"}
+{"ts":1600123015.542944,"uid":"CLhn7G4hcvNN8eP65f","id.orig_h":"10.9.14.101","id.orig_p":49322,"id.resp_h":"51.38.124.206","id.resp_p":80,"proto":"tcp","analyzer":"HTTP","failure_reason":"not a http request line"}
+{"ts":1600121927.761748,"uid":"CGkyw84aKjsmvtsnLf","id.orig_h":"10.9.14.101","id.orig_p":49285,"id.resp_h":"51.38.124.206","id.resp_p":80,"proto":"tcp","analyzer":"HTTP","failure_reason":"not a http request line"}
+{"ts":1600122177.252591,"uid":"C2tCrU3QFfHMPeWdDg","id.orig_h":"10.9.14.101","id.orig_p":49290,"id.resp_h":"51.38.124.206","id.resp_p":80,"proto":"tcp","analyzer":"HTTP","failure_reason":"not a http request line"}
+{"ts":1600123015.542944,"uid":"CxzR2dnkpiIEJHXB9","id.orig_h":"10.9.14.101","id.orig_p":49322,"id.resp_h":"51.38.124.206","id.resp_p":80,"proto":"tcp","analyzer":"HTTP","failure_reason":"not a http request line"}

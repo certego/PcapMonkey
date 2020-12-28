@@ -1,0 +1,5 @@
+[package]
+tags = signatures, bitcoin, mining, cryptocurrency
+description = Detects Bitcoin, Litecoin, or other cryptocurrency
+  mining traffic that uses getwork, getblocktemplate, or Stratum mining
+  protocols over TCP or HTTP.

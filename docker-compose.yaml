@@ -1,0 +1,108 @@
+version: '3.2'
+
+services:
+
+    elasticsearch:
+        container_name: pcapopt_elasticsearch
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.9.2
+        hostname: elasticsearch
+        environment: 
+            - node.name=snowcrash
+            - bootstrap.memory_lock=true
+            - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+            - discovery.type=single-node
+            - cluster.routing.allocation.disk.watermark.low=99%
+            - cluster.routing.allocation.disk.watermark.high=99%
+            - cluster.routing.allocation.disk.watermark.flood_stage=99%
+        ulimits:
+            memlock: 
+                soft: -1
+                hard: -1
+        volumes:
+            - elasticsearch_data:/usr/share/elasticsearch/data
+        expose:
+            - "9200"
+        healthcheck:
+            test: curl -XGET 'localhost:9200/_cluster/health?wait_for_status=yellow&timeout=180s&pretty'
+
+    filebeat:
+        container_name: pcapopt_filebeat
+        image: docker.elastic.co/beats/filebeat:7.9.2
+        depends_on:
+            - elasticsearch
+        volumes:
+            - ./config/filebeat/modules.d:/usr/share/filebeat/modules.d:ro
+            - ./config/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+            - ./logs/suricata:/var/log/suricata:ro
+            - ./logs/zeek:/var/log/bro/current:ro
+
+    logstash:
+        container_name: pcapopt_logstash
+        image: docker.elastic.co/logstash/logstash:7.9.2
+        hostname: logstash
+        environment:
+            - "LS_JAVA_OPTS=-Xms512m -Xmx512m"
+        depends_on: 
+            - elasticsearch
+        volumes:
+            - ./config/logstash/pipeline:/usr/share/logstash/pipeline:ro
+            - ./config/logstash/templates:/usr/share/logstash/templates:ro
+            - ./config/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+            - ./config/logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro
+            - ./logs/suricata:/var/log/suricata:ro
+            - ./logs/zeek:/var/log/zeek/current:ro
+
+    kibana:
+        container_name: pcapopt_kibana
+        image: docker.elastic.co/kibana/kibana:7.9.2
+        hostname: kibana
+        environment:
+            ELASTICSEARCH_URL: http://elasticsearch:9200
+            ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+        links:
+            - elasticsearch
+        depends_on:
+            - elasticsearch
+        expose:
+            - "5601"
+        ports:
+            - "127.0.0.1:5601:5601"
+        healthcheck:
+            test: curl -fs http://localhost:5601/
+  
+    suricata:
+        container_name: pcapopt_suricata
+        image: jasonish/suricata:6.0.0
+        hostname: suricata
+        working_dir: /var/log/suricata
+        entrypoint:
+            - suricata
+            - --runmode=single
+            - -r
+            - /pcap/
+        volumes:
+            - ./config/suricata/etc:/etc/suricata:ro
+            - ./config/suricata/rules:/var/lib/suricata/rules/
+            - ./pcap:/pcap
+            - ./logs/suricata:/var/log/suricata
+
+    zeek:
+        container_name: pcapopt_zeek
+        image: certego/zeek:3.1.2-1
+        hostname: zeek
+        working_dir: /var/log/zeek
+        entrypoint:
+            - /process_pcap_folder.sh
+            - /pcap
+            - local
+            - "Site::local_nets += { 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 }"
+        volumes:
+            - ./config/zeek/site:/zeek/share/zeek/site:ro
+            - ./pcap:/pcap
+            - ./logs/zeek:/var/log/zeek
+            - ./logs/zeek/extracted_files:/opt/zeek/extracted
+
+volumes:
+
+    elasticsearch_data:
+        driver: local

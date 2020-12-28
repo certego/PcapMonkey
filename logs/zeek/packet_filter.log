@@ -1,0 +1,7 @@
+{"ts":1608887378.867615,"node":"zeek","filter":"ip or not ip","init":true,"success":true}
+{"ts":1608887490.930423,"node":"zeek","filter":"ip or not ip","init":true,"success":true}
+{"ts":1608888218.517985,"node":"zeek","filter":"ip or not ip","init":true,"success":true}
+{"ts":1608888303.482196,"node":"zeek","filter":"ip or not ip","init":true,"success":true}
+{"ts":1608889920.584686,"node":"zeek","filter":"ip or not ip","init":true,"success":true}
+{"ts":1608973533.78744,"node":"zeek","filter":"ip or not ip","init":true,"success":true}
+{"ts":1608974524.431781,"node":"zeek","filter":"ip or not ip","init":true,"success":true}

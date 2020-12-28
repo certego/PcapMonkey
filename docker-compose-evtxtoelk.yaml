@@ -1,0 +1,19 @@
+version: '3.2'
+
+services:
+    evtxtoelk:
+        container_name: pcapopt_evtxtoelk
+        image: certego/evtxtoelk
+        entrypoint:
+            - python
+            - evtxtoelk.py
+            - /var/log/event_logs
+            - elasticsearch:9200
+            - -s
+            - "2000"
+            - -i
+            - windows_events_original_ts
+        depends_on:
+            - elasticsearch
+        volumes:
+            - ./import_event_logs:/var/log/event_logs:ro
