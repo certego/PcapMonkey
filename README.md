@@ -4,7 +4,7 @@ It can also save Suricata and Zeek logs in Elasticsearch using the new Elasticse
 
 pcapmonkey uses default docker container for most images and aims to be easy and straightforward to use.
 
-Video tutorial: [Startup](https://www.youtube.com/watch?v=h0bardzCOM4), [Pcap Analisys](https://www.youtube.com/watch?v=zVlFRs2vCQg)
+Video tutorial: [Startup](https://www.youtube.com/watch?v=h0bardzCOM4), [Pcap Analysis](https://www.youtube.com/watch?v=zVlFRs2vCQg)
 # Install & uninstall
 Install Docker-CE and docker-compose:
 - https://docs.docker.com/install/linux/docker-ce/ubuntu/
@@ -41,14 +41,14 @@ pcapopt_kibana          /usr/local/bin/dumb-init - ...   Up (health: starting)  
 
 Kibana and elasticsearch could take a couple of minutes to start. You can monitor the progress by doing `docker-compose ps` and waiting for `starting` to go away.
 
-When everything is up and runnning you can go to http://localhost:5601 to open Kibana web interface.
+When everything is up and running you can go to http://localhost:5601 to open Kibana web interface.
 At the first access you should see the following screen:
 
 ![Kibana first access](https://github.com/certego/pcapmonkey/raw/master/images/kibana_first_access.png)
 
 Click **"Explore on my own"** to close the window.
 
-Now we can import the panoptikon index patterns, they will be used to access our pcap data. To do so click the Managment icon (the cog):
+Now we can import the panoptikon index patterns, they will be used to access our pcap data. To do so click the Management icon (the cog):
 
 ![Kibana cog](https://github.com/certego/pcapmonkey/raw/master/images/kibana_managment.png)
 
@@ -113,7 +113,7 @@ To clean logs on disk (everything on logs folder) run the following script:
 
 If you have analyzed the same pcap dozen of times (to test out suricata rules) it could be useful to delete old data from elasticsearch. To do so you can open Kibana web interface and follow this path:
 ```
-Managment -> Index Managment -> select `panoptikon_original_ts` -> click "manage index" -> delete index
+Management -> Index Management -> select `panoptikon_original_ts` -> click "manage index" -> delete index
 ```
 
 # Advanced Usage
