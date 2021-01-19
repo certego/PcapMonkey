@@ -3,7 +3,7 @@ version: '3.2'
 services:
 
     elasticsearch:
-        container_name: pcapopt_elasticsearch
+        container_name: pcapmonkey_elasticsearch
         image: docker.elastic.co/elasticsearch/elasticsearch:7.9.2
         hostname: elasticsearch
         environment: 
@@ -26,7 +26,7 @@ services:
             test: curl -XGET 'localhost:9200/_cluster/health?wait_for_status=yellow&timeout=180s&pretty'
 
     filebeat:
-        container_name: pcapopt_filebeat
+        container_name: pcapmonkey_filebeat
         image: docker.elastic.co/beats/filebeat:7.9.2
         depends_on:
             - elasticsearch
@@ -37,7 +37,7 @@ services:
             - ./logs/zeek:/var/log/bro/current:ro
 
     logstash:
-        container_name: pcapopt_logstash
+        container_name: pcapmonkey_logstash
         image: docker.elastic.co/logstash/logstash:7.9.2
         hostname: logstash
         environment:
@@ -53,7 +53,7 @@ services:
             - ./logs/zeek:/var/log/zeek/current:ro
 
     kibana:
-        container_name: pcapopt_kibana
+        container_name: pcapmonkey_kibana
         image: docker.elastic.co/kibana/kibana:7.9.2
         hostname: kibana
         environment:
@@ -71,7 +71,7 @@ services:
             test: curl -fs http://localhost:5601/
   
     suricata:
-        container_name: pcapopt_suricata
+        container_name: pcapmonkey_suricata
         image: jasonish/suricata:6.0.0
         hostname: suricata
         working_dir: /var/log/suricata
@@ -87,7 +87,7 @@ services:
             - ./logs/suricata:/var/log/suricata
 
     zeek:
-        container_name: pcapopt_zeek
+        container_name: pcapmonkey_zeek
         image: certego/zeek:3.1.2-1
         hostname: zeek
         working_dir: /var/log/zeek

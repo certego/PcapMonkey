@@ -34,9 +34,9 @@ The output should be the following:
 ```
 Name                       Command                       State                    Ports          
 ---------------------------------------------------------------------------------------------------------
-pcapopt_elasticsearch   /usr/local/bin/docker-entr ...   Up (health: starting)   9200/tcp, 9300/tcp      
-pcapopt_logstash        /usr/local/bin/docker-entr ...   Up                                              
-pcapopt_kibana          /usr/local/bin/dumb-init - ...   Up (health: starting)   127.0.0.1:5601->5601/tcp
+pcapmonkey_elasticsearch   /usr/local/bin/docker-entr ...   Up (health: starting)   9200/tcp, 9300/tcp      
+pcapmonkey_logstash        /usr/local/bin/docker-entr ...   Up                                              
+pcapmonkey_kibana          /usr/local/bin/dumb-init - ...   Up (health: starting)   127.0.0.1:5601->5601/tcp
 ```
 
 Kibana and elasticsearch could take a couple of minutes to start. You can monitor the progress by doing `docker-compose ps` and waiting for `starting` to go away.
