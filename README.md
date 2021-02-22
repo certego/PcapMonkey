@@ -2,7 +2,7 @@
 Pcapmonkey is a project that will provide an easy way to analyze pcap using the latest version of Suricata and Zeek.
 It can also save Suricata and Zeek logs in Elasticsearch using the new Elasticsearch Common Schema or the original field names.
 
-pcapmonkey uses default docker container for most images and aims to be easy and straightforward to use.
+Pcapmonkey uses default docker container for most images and aims to be easy and straightforward to use.
 
 Video tutorial: [Startup](https://www.youtube.com/watch?v=h0bardzCOM4), [Pcap Analysis](https://www.youtube.com/watch?v=zVlFRs2vCQg)
 # Install & uninstall
@@ -15,13 +15,13 @@ To Unistall and remove all files delete all containers with
 ```
 sudo docker-compose down -v
 ```
-Than you can safely delete this repository
+Then you can safely delete this repository.
 
 # Basic Usage
 
 ## Start Elasticsearch stack
 
-To start Elasticsearch,Logstash and Kibana run the following command
+To start Elasticsearch, Logstash and Kibana run the following command
 ```
 sudo docker-compose up -d elasticsearch logstash kibana
 ```
@@ -52,11 +52,11 @@ Now we can import the panoptikon index patterns, they will be used to access our
 
 ![Kibana cog](https://github.com/certego/pcapmonkey/raw/master/images/kibana_managment.png)
 
-Than click "Saved object":
+Then click "Saved object":
 
 ![Saved Object](https://github.com/certego/pcapmonkey/raw/master/images/kibana_saved_object.png)
 
-Than open the Import dialog and import `kibana.ndjson` file from this repository. Now going back in Kibana discover you should see two index pattern called `pcapmonkey*` and `pcapmonkey_original_ts*`.
+Then open the Import dialog and import `kibana.ndjson` file from this repository. Now going back in Kibana discover you should see two index pattern called `pcapmonkey*` and `pcapmonkey_original_ts*`.
 
 
 ## Managing suricata Signatures
