@@ -2,7 +2,7 @@
 Pcapmonkey is a project that will provide an easy way to analyze pcap using the latest version of Suricata and Zeek.
 It can also save Suricata and Zeek logs in Elasticsearch using the new Elasticsearch Common Schema or the original field names.
 
-Pcapmonkey uses default docker container for most images and aims to be easy and straightforward to use.
+Pcapmonkey uses the default docker container for most images and aims to be easy and straightforward to use.
 
 Video tutorial: [Startup](https://www.youtube.com/watch?v=h0bardzCOM4), [Pcap Analysis](https://www.youtube.com/watch?v=zVlFRs2vCQg)
 # Install & uninstall
@@ -11,7 +11,7 @@ Install Docker-CE and docker-compose:
 - https://docs.docker.com/compose/install/
 
 ## Uninstall
-To Unistall and remove all files delete all containers with
+To uninstall and remove all files delete all containers with
 ```
 sudo docker-compose down -v
 ```
@@ -56,10 +56,10 @@ Then click "Saved object":
 
 ![Saved Object](https://github.com/certego/pcapmonkey/raw/master/images/kibana_saved_object.png)
 
-Then open the Import dialog and import `kibana.ndjson` file from this repository. Now going back in Kibana discover you should see two index pattern called `pcapmonkey*` and `pcapmonkey_original_ts*`.
+Then open the Import dialog and import `kibana.ndjson` file from this repository. Now going back in Kibana discover you should see two index patterns called `pcapmonkey*` and `pcapmonkey_original_ts*`.
 
 
-## Managing suricata Signatures
+## Managing Suricata Signatures
 Use the following command to download all Open ET rules:
 ```
 sudo docker-compose run --entrypoint='suricata-update -f' suricata
@@ -81,13 +81,13 @@ sudo docker-compose up zeek suricata
 The containers will print the output on the console and exit when they finish processing the pcap.
 You can see the results on Kibana: http://localhost:5601
 
-In Kibana there are two index patterns: `pcapmonkey*` and `pcapmonkey_original_ts*` you can select those from the drop down menu:
+In Kibana there are two index patterns: `pcapmonkey*` and `pcapmonkey_original_ts*` you can select those from the drop-down menu:
 
 ![Kibana index pattern dropdown](https://github.com/certego/pcapmonkey/raw/master/images/kibana_indexpattern_dropdown.png)
 
-You can see both zeek and suricata logs from these index patterns. `pcapmonkey*` uses the default timestamp field (`@timestamp`) to show logs. That means logs data are indexes when they are read. The original pcap time is saved in the `timestamp` field.
+You can see both zeek and suricata logs from these index patterns. `pcapmonkey*` uses the default timestamp field (`@timestamp`) to show logs. That means log data are indexes when they are read. The original pcap time is saved in the `timestamp` field.
 
-Meanwhile `pcapotikon_original_ts*` uses the original pcap time as default timestamp so you can see the real timeline. Kibana, by default, shows the last 15 minuts of data, so if you are analyzing old pcaps remember to widens the search timewindows using the menu on the top right of the page.
+Meanwhile `pcapotikon_original_ts*` uses the original pcap time as the default timestamp so you can see the real timeline. Kibana, by default, shows the last 15 minutes of data, so if you are analyzing old pcaps remember to widen the search timewindows using the menu on the top right of the page.
 
 When you are done to stop everything run:
 ```
@@ -111,23 +111,23 @@ To clean logs on disk (everything on logs folder) run the following script:
 ```
 `sudo` may be needed if you are running docker as root since the logs file are written by zeek and suricata containers.
 
-If you have analyzed the same pcap dozen of times (to test out suricata rules) it could be useful to delete old data from elasticsearch. To do so you can open Kibana web interface and follow this path:
+If you have analyzed the same pcap dozen of times (to test out suricata rules) it could be useful to delete old data from elasticsearch. To do so you can open the Kibana web interface and follow this path:
 ```
 Management -> Index Management -> select `panoptikon_original_ts` -> click "manage index" -> delete index
 ```
 
 # Advanced Usage
 
-## Light weight usage: ditching elasticsearch (the hacker way)
-If you prefer using the command line you can find suricata and zeek logs in `./logs` directory.
+## Lightweight usage: ditching elasticsearch (the hacker way)
+If you prefer using the command line you can find suricata and zeek logs in the `./logs` directory.
 
-If you don't want to waste time starting filebeat/elasticsearch/kibana go to `./zeek/site/local.zeek` and comment out the first line (`@load policy/tuning/json-logs.zeek`). Then start analyzing a new pcap and enjoy plaintext, tab separated zeek logs. `awk` all the way, baby!
+If you don't want to waste time starting filebeat/elasticsearch/kibana go to `./zeek/site/local.zeek` and comment out the first line (`@load policy/tuning/json-logs.zeek`). Then start analyzing a new pcap and enjoy plaintext, tab-separated zeek logs. `awk` all the way, baby!
 
-Even if you'd like to use directly the log file I suggest to keep them in `.json` format and use `jq` utility to query them. You can read a pretty good `jq` primer [here](https://www.gibiansky.com/blog/command-line/jq-primer/index.html)
+Even if you'd like to use directly the log file I suggest keeping them in `.json` format and use `jq` utility to query them. You can read a pretty good `jq` primer [here](https://www.gibiansky.com/blog/command-line/jq-primer/index.html)
 
 ## Import Windows Event logs
 It's possible to import `.evtx` files in elasticsearch on index `windows_events` using the following command:
-First be sure to have elasticsearch up and running:
+First, be sure to have elasticsearch up and running:
 ```
 sudo docker-compose elasticsearch kibana
 ```
@@ -141,7 +141,7 @@ Or you can use the following script that does the same:
 sudo ./import_event_logs.sh
 ```
 
-Now you can find the Event logs in `windows_events_original_ts` and in `windows_events`. Like suricata/zeek logs they are indexed by original timestamp of event and by ingestion timestamp
+Now you can find the Event logs in `windows_events_original_ts` and in `windows_events`. Like suricata/zeek logs they are indexed by the original timestamp of the event and by ingestion timestamp
 
 ## Using Elastic Common Schema
 
