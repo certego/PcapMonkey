@@ -5,3 +5,4 @@
 {"ts":1608889920.584686,"node":"zeek","filter":"ip or not ip","init":true,"success":true}
 {"ts":1608973533.78744,"node":"zeek","filter":"ip or not ip","init":true,"success":true}
 {"ts":1608974524.431781,"node":"zeek","filter":"ip or not ip","init":true,"success":true}
+{"ts":1616427159.145856,"node":"zeek","filter":"ip or not ip","init":true,"success":true}

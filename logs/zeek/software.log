@@ -23,3 +23,6 @@
 {"ts":1606866102.845116,"host":"10.12.1.101","software_type":"HTTP::BROWSER","name":"<unknown browser>","unparsed_version":"Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)"}
 {"ts":1606866204.49122,"host":"10.12.1.101","software_type":"HTTP::BROWSER","name":"Windows-Update-Agent","version.major":10,"version.minor":0,"version.minor2":10011,"version.minor3":16384,"version.addl":"Client","unparsed_version":"Windows-Update-Agent/10.0.10011.16384 Client-Protocol/2.31"}
 {"ts":1606866264.69937,"host":"10.12.1.101","software_type":"HTTP::BROWSER","name":"Microsoft-CryptoAPI","version.major":10,"version.minor":0,"unparsed_version":"Microsoft-CryptoAPI/10.0"}
+{"ts":1606866102.845116,"host":"10.12.1.101","software_type":"HTTP::BROWSER","name":"<unknown browser>","unparsed_version":"Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)"}
+{"ts":1606866204.49122,"host":"10.12.1.101","software_type":"HTTP::BROWSER","name":"Windows-Update-Agent","version.major":10,"version.minor":0,"version.minor2":10011,"version.minor3":16384,"version.addl":"Client","unparsed_version":"Windows-Update-Agent/10.0.10011.16384 Client-Protocol/2.31"}
+{"ts":1606866264.69937,"host":"10.12.1.101","software_type":"HTTP::BROWSER","name":"Microsoft-CryptoAPI","version.major":10,"version.minor":0,"unparsed_version":"Microsoft-CryptoAPI/10.0"}

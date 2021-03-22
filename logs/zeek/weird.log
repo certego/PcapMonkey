@@ -56,3 +56,11 @@
 {"ts":1606867350.61698,"uid":"CsIl1e1Pv5rHWvDtu9","id.orig_h":"10.12.1.101","id.orig_p":49840,"id.resp_h":"10.12.1.2","id.resp_p":49675,"name":"unknown_dce_rpc_auth_type","addl":"68","notice":false,"peer":"zeek"}
 {"ts":1606867351.137206,"uid":"ChAONx3YPIHe5Zg3Wa","id.orig_h":"10.12.1.101","id.orig_p":49841,"id.resp_h":"10.12.1.2","id.resp_p":49675,"name":"unknown_dce_rpc_auth_type","addl":"68","notice":false,"peer":"zeek"}
 {"ts":1606868102.222622,"uid":"Cwwu9g2l3pzQp5zJ56","id.orig_h":"10.12.1.101","id.orig_p":49835,"id.resp_h":"40.90.189.152","id.resp_p":443,"name":"TCP_ack_underflow_or_misorder","notice":false,"peer":"zeek"}
+{"ts":1606866052.973,"name":"unknown_protocol","addl":"2","notice":false,"peer":"zeek"}
+{"ts":1606866055.984642,"uid":"CSsRKu3XDbc6dqK7I7","id.orig_h":"10.12.1.101","id.orig_p":52537,"id.resp_h":"10.12.1.2","id.resp_p":53,"name":"DNS_RR_length_mismatch","notice":false,"peer":"zeek"}
+{"ts":1606866055.987933,"uid":"C2AuRMrTOO9xCAYG","id.orig_h":"10.12.1.101","id.orig_p":61293,"id.resp_h":"10.12.1.2","id.resp_p":53,"name":"DNS_RR_length_mismatch","notice":false,"peer":"zeek"}
+{"ts":1606866068.815192,"uid":"CXl87A2QBF1xaETuMk","id.orig_h":"10.12.1.101","id.orig_p":49775,"id.resp_h":"10.12.1.2","id.resp_p":49675,"name":"unknown_dce_rpc_auth_type","addl":"68","notice":false,"peer":"zeek"}
+{"ts":1606866654.656953,"uid":"Ct5tl4pJoPFNEpS91","id.orig_h":"10.12.1.101","id.orig_p":49827,"id.resp_h":"10.12.1.2","id.resp_p":49675,"name":"unknown_dce_rpc_auth_type","addl":"68","notice":false,"peer":"zeek"}
+{"ts":1606867350.61698,"uid":"CnakBW3kK7wys1XGj2","id.orig_h":"10.12.1.101","id.orig_p":49840,"id.resp_h":"10.12.1.2","id.resp_p":49675,"name":"unknown_dce_rpc_auth_type","addl":"68","notice":false,"peer":"zeek"}
+{"ts":1606867351.137206,"uid":"CpjXZt3lZ06YqE0dle","id.orig_h":"10.12.1.101","id.orig_p":49841,"id.resp_h":"10.12.1.2","id.resp_p":49675,"name":"unknown_dce_rpc_auth_type","addl":"68","notice":false,"peer":"zeek"}
+{"ts":1606868102.222622,"uid":"Crqf54BtbfKPfhBx","id.orig_h":"10.12.1.101","id.orig_p":49835,"id.resp_h":"40.90.189.152","id.resp_p":443,"name":"TCP_ack_underflow_or_misorder","notice":false,"peer":"zeek"}

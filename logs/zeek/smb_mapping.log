@@ -38,3 +38,11 @@
 {"ts":1606867856.971089,"uid":"CvFqdS3yIgb2c26zB8","id.orig_h":"10.12.1.101","id.orig_p":49848,"id.resp_h":"10.12.1.2","id.resp_p":445,"path":"\\\\MrNatural-DC.mrnatural.info\\IPC$","share_type":"PIPE"}
 {"ts":1606868756.948157,"uid":"COQDJe4GYiQW5Ti11d","id.orig_h":"10.12.1.101","id.orig_p":49854,"id.resp_h":"10.12.1.2","id.resp_p":445,"path":"\\\\MrNatural-DC.mrnatural.info\\IPC$","share_type":"PIPE"}
 {"ts":1606869656.917708,"uid":"CZXc2l40SRqVnINrxb","id.orig_h":"10.12.1.101","id.orig_p":49865,"id.resp_h":"10.12.1.2","id.resp_p":445,"path":"\\\\MrNatural-DC.mrnatural.info\\IPC$","share_type":"PIPE"}
+{"ts":1606866056.9420472,"uid":"CcBJGy33uMcf8yQY09","id.orig_h":"10.12.1.101","id.orig_p":49766,"id.resp_h":"10.12.1.2","id.resp_p":445,"path":"\\\\MrNatural-DC.mrnatural.info\\IPC$","share_type":"PIPE"}
+{"ts":1606866068.7319,"uid":"CYJmbk2qqSKRPnajuc","id.orig_h":"10.12.1.101","id.orig_p":49771,"id.resp_h":"10.12.1.2","id.resp_p":445,"path":"\\\\MRNATURAL.INFO\\IPC$","share_type":"PIPE"}
+{"ts":1606866068.898544,"uid":"C1b4KJ1v5DC98Xvwl3","id.orig_h":"10.12.1.101","id.orig_p":49776,"id.resp_h":"10.12.1.2","id.resp_p":445,"path":"\\\\MRNATURAL-DC\\shared","share_type":"DISK"}
+{"ts":1606866956.9523349,"uid":"CxG1zn24sxSZDQdE07","id.orig_h":"10.12.1.101","id.orig_p":49833,"id.resp_h":"10.12.1.2","id.resp_p":445,"path":"\\\\MrNatural-DC.mrnatural.info\\IPC$","share_type":"PIPE"}
+{"ts":1606867361.943655,"uid":"CjgMbdgfM2WQ5KTGc","id.orig_h":"10.12.1.101","id.orig_p":49843,"id.resp_h":"10.12.1.2","id.resp_p":445,"path":"\\\\MrNatural-DC.mrnatural.info\\IPC$","share_type":"PIPE"}
+{"ts":1606867856.971089,"uid":"CmIYp2zuEER46v7ye","id.orig_h":"10.12.1.101","id.orig_p":49848,"id.resp_h":"10.12.1.2","id.resp_p":445,"path":"\\\\MrNatural-DC.mrnatural.info\\IPC$","share_type":"PIPE"}
+{"ts":1606868756.948157,"uid":"CSWCiO20KFiK21O9E7","id.orig_h":"10.12.1.101","id.orig_p":49854,"id.resp_h":"10.12.1.2","id.resp_p":445,"path":"\\\\MrNatural-DC.mrnatural.info\\IPC$","share_type":"PIPE"}
+{"ts":1606869656.917708,"uid":"CGqSPH3IBuXa5hQfd","id.orig_h":"10.12.1.101","id.orig_p":49865,"id.resp_h":"10.12.1.2","id.resp_p":445,"path":"\\\\MrNatural-DC.mrnatural.info\\IPC$","share_type":"PIPE"}
