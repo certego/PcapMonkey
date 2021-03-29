@@ -152,5 +152,16 @@ Start the Elasticsearch with filebeat container:
 sudo docker-compose up -d elasticsearch filebeat kibana
 ```
 
-You can see your logs in `filebeat-*` index on Elasticsearch:
-[Todo screenshots]
+Create a new index for filebeat.
+
+```Stack Management -> Index Patterns -> Create new pattern.```
+
+![Kibana Index Patterns](./images/kibana_management_filebeat.png)
+
+Enter index pattern name `filebeat-*` and select `@timestamp` as the time field.
+
+![New Index Pattern](./images/kibana_new_index_filebeat.png)
+
+You can view your logs in `filebeat-*` index in the Discover section.
+
+![Filebeat Index Pattern](./images/kibana_index_dropdown_filebeat.png)
