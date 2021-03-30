@@ -10,6 +10,18 @@ Install Docker-CE and docker-compose:
 - https://docs.docker.com/install/linux/docker-ce/ubuntu/
 - https://docs.docker.com/compose/install/
 
+## PcapMonkey is partecipating to GSoC 2021 thanks to Honeynet project!
+### The Honeynet Project
+<a href="https://www.honeynet.org"> <img style="border: 0.2px solid black" width=115 height=150 src="images/honeynet_logo.png" alt="Honeynet.org logo"> </a>
+
+### Google Summer Of Code
+
+Since its birth, this project has been partecipating to the GSoC under the Honeynet Project!
+
+* 2021: [Projects available](https://www.honeynet.org/gsoc/gsoc-2021/google-summer-of-code-2021-project-ideas/)
+
+Stay tuned for the upcoming GSoC! Join the [Honeynet Slack chat](https://gsoc-slack.honeynet.org/) for more info.
+
 ## Uninstall
 To uninstall and remove all files delete all containers with
 ```
