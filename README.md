@@ -5,10 +5,6 @@ It can also save Suricata and Zeek logs in Elasticsearch using the new Elasticse
 Pcapmonkey uses the default docker container for most images and aims to be easy and straightforward to use.
 
 Video tutorial: [Startup](https://www.youtube.com/watch?v=h0bardzCOM4), [Pcap Analysis](https://www.youtube.com/watch?v=zVlFRs2vCQg)
-# Install & uninstall
-Install Docker-CE and docker-compose:
-- https://docs.docker.com/install/linux/docker-ce/ubuntu/
-- https://docs.docker.com/compose/install/
 
 ## PcapMonkey is partecipating to GSoC 2021 thanks to Honeynet project!
 ### The Honeynet Project
@@ -21,6 +17,11 @@ Since its birth, this project has been partecipating to the GSoC under the Honey
 * 2021: [Projects available](https://www.honeynet.org/gsoc/gsoc-2021/google-summer-of-code-2021-project-ideas/)
 
 Stay tuned for the upcoming GSoC! Join the [Honeynet Slack chat](https://gsoc-slack.honeynet.org/) for more info.
+
+# Install & uninstall
+Install Docker-CE and docker-compose:
+- https://docs.docker.com/install/linux/docker-ce/ubuntu/
+- https://docs.docker.com/compose/install/
 
 ## Uninstall
 To uninstall and remove all files delete all containers with
