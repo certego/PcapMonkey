@@ -72,7 +72,7 @@ services:
   
     suricata:
         container_name: pcapmonkey_suricata
-        image: jasonish/suricata:6.0.0
+        image: jasonish/suricata:latest
         hostname: suricata
         working_dir: /var/log/suricata
         entrypoint:
