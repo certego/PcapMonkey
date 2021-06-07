@@ -1,0 +1,388 @@
+01/20/2021-23:39:31.469656  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.1.21.2:88 -> 10.1.21.101:49672
+01/20/2021-23:39:31.753498  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.1.21.2:88 -> 10.1.21.101:49677
+01/20/2021-23:39:41.223705  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.1.21.2:88 -> 10.1.21.101:49695
+01/20/2021-23:39:54.171987  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.1.21.2:88 -> 10.1.21.101:49699
+01/20/2021-23:39:54.428280  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.1.21.2:88 -> 10.1.21.101:49704
+01/20/2021-23:40:38.303073  [**] [1:2018052:10] ET MALWARE Zbot Generic URI/Header Struct .bin [**] [Classification: A Network Trojan was detected] [Priority: 1] {TCP} 10.1.21.101:49723 -> 209.141.51.196:80
+01/20/2021-23:40:38.303073  [**] [1:2018752:12] ET MALWARE Generic .bin download from Dotted Quad [**] [Classification: A Network Trojan was detected] [Priority: 1] {TCP} 10.1.21.101:49723 -> 209.141.51.196:80
+01/20/2021-23:40:38.303331  [**] [1:2022050:3] ET MALWARE Likely Evil EXE download from dotted Quad by MSXMLHTTP M1 [**] [Classification: A Network Trojan was detected] [Priority: 1] {TCP} 209.141.51.196:80 -> 10.1.21.101:49723
+01/20/2021-23:40:38.534537  [**] [1:2018959:4] ET POLICY PE EXE or DLL Windows file download HTTP [**] [Classification: Potential Corporate Privacy Violation] [Priority: 1] {TCP} 209.141.51.196:80 -> 10.1.21.101:49723
+01/20/2021-23:40:38.534537  [**] [1:2022051:2] ET MALWARE Likely Evil EXE download from dotted Quad by MSXMLHTTP M2 [**] [Classification: A Network Trojan was detected] [Priority: 1] {TCP} 209.141.51.196:80 -> 10.1.21.101:49723
+01/20/2021-23:40:38.534537  [**] [1:2022053:2] ET MALWARE Likely Evil EXE download from MSXMLHTTP non-exe extension M2 [**] [Classification: A Network Trojan was detected] [Priority: 1] {TCP} 209.141.51.196:80 -> 10.1.21.101:49723
+01/20/2021-23:40:38.534537  [**] [1:2021076:2] ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 209.141.51.196:80 -> 10.1.21.101:49723
+01/20/2021-23:41:19.895931  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49749 -> 72.21.81.200:443
+01/20/2021-23:41:39.932796  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 185.186.244.130:80 -> 10.1.21.101:49751
+01/20/2021-23:41:49.922272  [**] [1:2023472:7] ET POLICY External IP Lookup Domain (myip.opendns .com in DNS lookup) [**] [Classification: Device Retrieving External IP Address Detected] [Priority: 2] {UDP} 10.1.21.101:52729 -> 208.67.222.222:53
+01/20/2021-23:41:49.982685  [**] [1:2023472:7] ET POLICY External IP Lookup Domain (myip.opendns .com in DNS lookup) [**] [Classification: Device Retrieving External IP Address Detected] [Priority: 2] {UDP} 10.1.21.101:52730 -> 208.67.222.222:53
+01/20/2021-23:41:50.431122  [**] [1:2027266:4] ET INFO Dotted Quad Host RAR Request [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 10.1.21.101:49755 -> 162.0.224.165:80
+01/20/2021-23:41:50.431122  [**] [1:2031745:1] ET MALWARE Ursnif Payload Request (grab32.rar) [**] [Classification: A Network Trojan was detected] [Priority: 1] {TCP} 10.1.21.101:49755 -> 162.0.224.165:80
+01/20/2021-23:41:51.081463  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49756 -> 104.95.253.170:443
+01/20/2021-23:41:51.494557  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49757 -> 23.193.34.14:443
+01/20/2021-23:41:52.075939  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49758 -> 172.217.13.202:443
+01/20/2021-23:42:02.555630  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49761 -> 193.239.84.250:443
+01/20/2021-23:42:05.065680  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49763 -> 193.239.84.250:443
+01/20/2021-23:42:06.574380  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49764 -> 193.239.84.250:443
+01/20/2021-23:42:07.909174  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49765 -> 193.239.84.250:443
+01/20/2021-23:46:58.888634  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49770 -> 193.239.84.250:443
+01/20/2021-23:47:00.132860  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49771 -> 193.239.84.250:443
+01/20/2021-23:52:00.150470  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49787 -> 193.239.84.250:443
+01/20/2021-23:52:01.349398  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49788 -> 193.239.84.250:443
+01/20/2021-23:57:01.353524  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49805 -> 193.239.84.250:443
+01/20/2021-23:57:03.081285  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49806 -> 193.239.84.250:443
+01/21/2021-00:02:03.056469  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49807 -> 193.239.84.250:443
+01/21/2021-00:02:04.298660  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49808 -> 193.239.84.250:443
+01/21/2021-00:07:04.293607  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49810 -> 193.239.84.250:443
+01/21/2021-00:07:05.509024  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49811 -> 193.239.84.250:443
+01/21/2021-00:12:05.475078  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49817 -> 193.239.84.250:443
+01/21/2021-00:12:06.691834  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49818 -> 193.239.84.250:443
+01/21/2021-00:17:06.691006  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49819 -> 193.239.84.250:443
+01/21/2021-00:17:07.912423  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49820 -> 193.239.84.250:443
+01/21/2021-00:22:07.991641  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49821 -> 193.239.84.250:443
+01/21/2021-00:22:09.307957  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49822 -> 193.239.84.250:443
+01/21/2021-00:27:09.256865  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49827 -> 193.239.84.250:443
+01/21/2021-00:27:10.521185  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49828 -> 193.239.84.250:443
+01/21/2021-00:32:10.489338  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49829 -> 193.239.84.250:443
+01/21/2021-00:32:11.735703  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49830 -> 193.239.84.250:443
+01/21/2021-00:37:11.784830  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49835 -> 193.239.84.250:443
+01/21/2021-00:37:13.011239  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49836 -> 193.239.84.250:443
+01/21/2021-00:42:13.018691  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49845 -> 84.252.95.102:443
+01/21/2021-00:42:14.260955  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49846 -> 84.252.95.102:443
+01/21/2021-00:47:14.265295  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49848 -> 84.252.95.102:443
+01/21/2021-00:47:15.517595  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49849 -> 84.252.95.102:443
+01/21/2021-00:52:15.526125  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49850 -> 84.252.95.102:443
+01/21/2021-00:52:17.224999  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49851 -> 84.252.95.102:443
+01/21/2021-00:57:17.265784  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49854 -> 84.252.95.102:443
+01/21/2021-00:57:18.533668  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49855 -> 84.252.95.102:443
+01/21/2021-01:02:18.564308  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49856 -> 84.252.95.102:443
+01/21/2021-01:02:19.851103  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49857 -> 84.252.95.102:443
+01/21/2021-01:07:19.859609  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49858 -> 84.252.95.102:443
+01/21/2021-01:07:21.224978  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49859 -> 84.252.95.102:443
+01/21/2021-01:12:21.214551  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49862 -> 84.252.95.102:443
+01/21/2021-01:12:22.593515  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49863 -> 84.252.95.102:443
+01/21/2021-01:17:22.593396  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49864 -> 84.252.95.102:443
+01/21/2021-01:17:23.966890  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49865 -> 84.252.95.102:443
+01/21/2021-01:22:23.960346  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49866 -> 84.252.95.102:443
+01/21/2021-01:22:25.257235  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49867 -> 84.252.95.102:443
+01/21/2021-01:27:25.437351  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49871 -> 84.252.95.102:443
+01/21/2021-01:27:26.860335  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49872 -> 84.252.95.102:443
+01/21/2021-01:32:26.877673  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49878 -> 84.252.95.102:443
+01/21/2021-01:32:28.169681  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49879 -> 84.252.95.102:443
+01/21/2021-01:37:28.174250  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49884 -> 84.252.95.102:443
+01/21/2021-01:37:29.541914  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49885 -> 84.252.95.102:443
+01/21/2021-01:42:29.703449  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49898 -> 193.239.84.250:443
+01/21/2021-01:42:30.808293  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49899 -> 193.239.84.250:443
+01/21/2021-01:47:30.807072  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49900 -> 193.239.84.250:443
+01/21/2021-01:47:31.893045  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49901 -> 193.239.84.250:443
+01/21/2021-01:52:31.880926  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49902 -> 193.239.84.250:443
+01/21/2021-01:52:33.057358  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49903 -> 193.239.84.250:443
+01/21/2021-01:57:33.095293  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49906 -> 193.239.84.250:443
+01/21/2021-01:57:34.248114  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49907 -> 193.239.84.250:443
+01/21/2021-02:02:34.224618  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49909 -> 193.239.84.250:443
+01/21/2021-02:02:35.400308  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49910 -> 193.239.84.250:443
+01/21/2021-02:07:35.434257  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49911 -> 193.239.84.250:443
+01/21/2021-02:07:36.612725  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49912 -> 193.239.84.250:443
+01/21/2021-02:12:36.558039  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49915 -> 193.239.84.250:443
+01/21/2021-02:12:37.985419  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49916 -> 193.239.84.250:443
+01/21/2021-02:17:37.985183  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49917 -> 193.239.84.250:443
+01/21/2021-02:17:39.142266  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49918 -> 193.239.84.250:443
+01/21/2021-02:22:39.129795  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49920 -> 193.239.84.250:443
+01/21/2021-02:22:40.583368  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49921 -> 193.239.84.250:443
+01/21/2021-02:27:40.537056  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49924 -> 193.239.84.250:443
+01/21/2021-02:27:41.918141  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49925 -> 193.239.84.250:443
+01/21/2021-02:32:41.947689  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49926 -> 193.239.84.250:443
+01/21/2021-02:32:43.976609  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49927 -> 193.239.84.250:443
+01/21/2021-02:37:43.034848  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49932 -> 193.239.84.250:443
+01/21/2021-02:37:44.140305  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49933 -> 193.239.84.250:443
+01/21/2021-02:42:47.837344  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49939 -> 84.252.95.102:443
+01/21/2021-02:42:48.941391  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49940 -> 84.252.95.102:443
+01/21/2021-02:47:48.951040  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49941 -> 84.252.95.102:443
+01/21/2021-02:47:50.095755  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49942 -> 84.252.95.102:443
+01/21/2021-02:52:50.108282  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49943 -> 84.252.95.102:443
+01/21/2021-02:52:51.338509  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49944 -> 84.252.95.102:443
+01/21/2021-02:57:51.278234  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49948 -> 84.252.95.102:443
+01/21/2021-02:57:52.417860  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49949 -> 84.252.95.102:443
+01/21/2021-03:02:52.426433  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49950 -> 84.252.95.102:443
+01/21/2021-03:02:53.525079  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49951 -> 84.252.95.102:443
+01/21/2021-03:07:53.552929  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49953 -> 84.252.95.102:443
+01/21/2021-03:07:54.689015  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49954 -> 84.252.95.102:443
+01/21/2021-03:12:54.655611  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49956 -> 84.252.95.102:443
+01/21/2021-03:12:55.895592  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49957 -> 84.252.95.102:443
+01/21/2021-03:17:55.965387  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49958 -> 84.252.95.102:443
+01/21/2021-03:17:57.054911  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49959 -> 84.252.95.102:443
+01/21/2021-03:22:57.300237  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49968 -> 84.252.95.102:443
+01/21/2021-03:22:58.390712  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49969 -> 84.252.95.102:443
+01/21/2021-03:27:58.462554  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49972 -> 84.252.95.102:443
+01/21/2021-03:28:00.015844  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49973 -> 84.252.95.102:443
+01/21/2021-03:33:00.232026  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49974 -> 84.252.95.102:443
+01/21/2021-03:33:01.427618  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49975 -> 84.252.95.102:443
+01/21/2021-03:38:01.447248  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49985 -> 84.252.95.102:443
+01/21/2021-03:38:02.631049  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49986 -> 84.252.95.102:443
+01/21/2021-03:43:02.478744  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49989 -> 69.192.110.115:443
+01/21/2021-03:43:02.825733  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49990 -> 96.17.66.27:443
+01/21/2021-03:43:03.449606  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49991 -> 172.217.13.106:443
+01/21/2021-03:48:03.568202  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49992 -> 193.239.84.250:443
+01/21/2021-03:48:04.786523  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49993 -> 193.239.84.250:443
+01/21/2021-03:53:04.777566  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49996 -> 193.239.84.250:443
+01/21/2021-03:53:06.033835  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:49997 -> 193.239.84.250:443
+01/21/2021-03:58:06.058898  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50001 -> 193.239.84.250:443
+01/21/2021-03:58:07.358135  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50002 -> 193.239.84.250:443
+01/21/2021-04:03:07.315609  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50004 -> 193.239.84.250:443
+01/21/2021-04:03:08.495437  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50005 -> 193.239.84.250:443
+01/21/2021-04:08:08.490165  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50006 -> 193.239.84.250:443
+01/21/2021-04:08:09.784872  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50007 -> 193.239.84.250:443
+01/21/2021-04:13:09.767123  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50011 -> 193.239.84.250:443
+01/21/2021-04:13:11.077598  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50012 -> 193.239.84.250:443
+01/21/2021-04:18:11.042623  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50013 -> 193.239.84.250:443
+01/21/2021-04:18:12.379541  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50014 -> 193.239.84.250:443
+01/21/2021-04:23:12.374634  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50015 -> 193.239.84.250:443
+01/21/2021-04:23:13.666177  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50016 -> 193.239.84.250:443
+01/21/2021-04:28:14.849634  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50020 -> 193.239.84.250:443
+01/21/2021-04:28:16.135310  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50021 -> 193.239.84.250:443
+01/21/2021-04:33:16.138589  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50022 -> 193.239.84.250:443
+01/21/2021-04:33:17.467772  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50023 -> 193.239.84.250:443
+01/21/2021-04:38:17.915622  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50028 -> 193.239.84.250:443
+01/21/2021-04:38:19.302579  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50029 -> 193.239.84.250:443
+01/21/2021-04:43:19.386039  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50033 -> 84.252.95.102:443
+01/21/2021-04:43:20.660081  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50034 -> 84.252.95.102:443
+01/21/2021-04:48:20.648002  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50035 -> 84.252.95.102:443
+01/21/2021-04:48:21.927001  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50036 -> 84.252.95.102:443
+01/21/2021-04:53:21.943675  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50038 -> 84.252.95.102:443
+01/21/2021-04:53:23.206286  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50039 -> 84.252.95.102:443
+01/21/2021-04:58:23.314805  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50042 -> 84.252.95.102:443
+01/21/2021-04:58:24.572721  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50043 -> 84.252.95.102:443
+01/21/2021-05:03:24.580700  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50044 -> 84.252.95.102:443
+01/21/2021-05:03:25.938229  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50045 -> 84.252.95.102:443
+01/21/2021-05:08:25.959261  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50046 -> 84.252.95.102:443
+01/21/2021-05:08:27.223832  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50047 -> 84.252.95.102:443
+01/21/2021-05:13:27.763009  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50055 -> 84.252.95.102:443
+01/21/2021-05:13:29.469317  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50056 -> 84.252.95.102:443
+01/21/2021-05:18:29.241752  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50057 -> 84.252.95.102:443
+01/21/2021-05:18:30.986740  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50058 -> 84.252.95.102:443
+01/21/2021-05:23:31.039992  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50059 -> 84.252.95.102:443
+01/21/2021-05:23:32.360109  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50060 -> 84.252.95.102:443
+01/21/2021-05:28:32.294230  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50064 -> 84.252.95.102:443
+01/21/2021-05:28:34.441027  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50065 -> 84.252.95.102:443
+01/21/2021-05:33:34.338306  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50066 -> 84.252.95.102:443
+01/21/2021-05:33:35.640184  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50067 -> 84.252.95.102:443
+01/21/2021-05:38:35.653025  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50077 -> 84.252.95.102:443
+01/21/2021-05:38:37.988960  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50078 -> 84.252.95.102:443
+01/21/2021-05:43:36.885488  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50081 -> 193.239.84.250:443
+01/21/2021-05:43:37.991105  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50082 -> 193.239.84.250:443
+01/21/2021-05:48:37.975709  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50086 -> 193.239.84.250:443
+01/21/2021-05:48:39.104902  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50087 -> 193.239.84.250:443
+01/21/2021-05:53:39.155512  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50088 -> 193.239.84.250:443
+01/21/2021-05:53:40.420729  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50089 -> 193.239.84.250:443
+01/21/2021-05:58:40.260282  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50092 -> 193.239.84.250:443
+01/21/2021-05:58:41.352534  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50093 -> 193.239.84.250:443
+01/21/2021-06:03:41.380466  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50095 -> 193.239.84.250:443
+01/21/2021-06:03:42.514743  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50096 -> 193.239.84.250:443
+01/21/2021-06:08:42.509850  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50097 -> 193.239.84.250:443
+01/21/2021-06:08:43.662371  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50098 -> 193.239.84.250:443
+01/21/2021-06:13:43.945354  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50103 -> 193.239.84.250:443
+01/21/2021-06:13:45.224810  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50104 -> 193.239.84.250:443
+01/21/2021-06:18:45.178049  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50105 -> 193.239.84.250:443
+01/21/2021-06:18:46.255652  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50106 -> 193.239.84.250:443
+01/21/2021-06:23:46.313483  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50107 -> 193.239.84.250:443
+01/21/2021-06:23:47.447047  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50108 -> 193.239.84.250:443
+01/21/2021-06:28:47.480328  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50113 -> 193.239.84.250:443
+01/21/2021-06:28:48.572959  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50114 -> 193.239.84.250:443
+01/21/2021-06:33:48.557633  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50115 -> 193.239.84.250:443
+01/21/2021-06:33:49.635895  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50116 -> 193.239.84.250:443
+01/21/2021-06:38:49.668985  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50121 -> 193.239.84.250:443
+01/21/2021-06:38:50.782205  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50122 -> 193.239.84.250:443
+01/21/2021-06:43:50.758412  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50127 -> 84.252.95.102:443
+01/21/2021-06:43:51.886148  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50128 -> 84.252.95.102:443
+01/21/2021-06:48:51.879437  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50129 -> 84.252.95.102:443
+01/21/2021-06:48:53.043646  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50130 -> 84.252.95.102:443
+01/21/2021-06:53:53.042373  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50132 -> 84.252.95.102:443
+01/21/2021-06:53:54.098570  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50133 -> 84.252.95.102:443
+01/21/2021-06:58:54.171046  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50136 -> 84.252.95.102:443
+01/21/2021-06:58:55.228378  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50137 -> 84.252.95.102:443
+01/21/2021-07:03:55.244393  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50143 -> 84.252.95.102:443
+01/21/2021-07:03:56.349027  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50144 -> 84.252.95.102:443
+01/21/2021-07:08:56.394632  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50145 -> 84.252.95.102:443
+01/21/2021-07:08:57.616828  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50146 -> 84.252.95.102:443
+01/21/2021-07:13:57.640699  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50149 -> 84.252.95.102:443
+01/21/2021-07:13:58.700767  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50150 -> 84.252.95.102:443
+01/21/2021-07:18:58.730467  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50151 -> 84.252.95.102:443
+01/21/2021-07:18:59.928763  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50152 -> 84.252.95.102:443
+01/21/2021-07:23:59.880440  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50153 -> 84.252.95.102:443
+01/21/2021-07:24:01.033158  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50154 -> 84.252.95.102:443
+01/21/2021-07:29:01.025284  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50158 -> 84.252.95.102:443
+01/21/2021-07:29:02.613197  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50159 -> 84.252.95.102:443
+01/21/2021-07:39:40.688209  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.1.21.2:88 -> 10.1.21.101:50173
+01/21/2021-07:58:37.083945  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50186 -> 193.239.84.250:443
+01/21/2021-07:58:38.303393  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50187 -> 193.239.84.250:443
+01/21/2021-08:03:38.316431  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50189 -> 193.239.84.250:443
+01/21/2021-08:03:39.575587  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50190 -> 193.239.84.250:443
+01/21/2021-08:08:39.645897  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50191 -> 193.239.84.250:443
+01/21/2021-08:08:41.215365  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50192 -> 193.239.84.250:443
+01/21/2021-08:13:41.138399  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50195 -> 193.239.84.250:443
+01/21/2021-08:13:42.429539  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50196 -> 193.239.84.250:443
+01/21/2021-08:18:42.435708  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50197 -> 193.239.84.250:443
+01/21/2021-08:18:43.705073  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50198 -> 193.239.84.250:443
+01/21/2021-08:23:43.713478  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50199 -> 193.239.84.250:443
+01/21/2021-08:23:44.931435  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50200 -> 193.239.84.250:443
+01/21/2021-08:28:44.930118  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50203 -> 193.239.84.250:443
+01/21/2021-08:28:46.250998  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50204 -> 193.239.84.250:443
+01/21/2021-08:33:46.270909  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50205 -> 193.239.84.250:443
+01/21/2021-08:33:47.477277  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50206 -> 193.239.84.250:443
+01/21/2021-08:38:47.490463  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50211 -> 193.239.84.250:443
+01/21/2021-08:38:48.804920  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50212 -> 193.239.84.250:443
+01/21/2021-08:43:48.937314  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50215 -> 193.239.84.250:443
+01/21/2021-08:43:50.364725  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50216 -> 193.239.84.250:443
+01/21/2021-08:48:50.254270  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50217 -> 84.252.95.102:443
+01/21/2021-08:48:51.488116  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50218 -> 84.252.95.102:443
+01/21/2021-08:53:51.512201  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50224 -> 84.252.95.102:443
+01/21/2021-08:53:52.753233  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50225 -> 84.252.95.102:443
+01/21/2021-08:58:52.794136  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50230 -> 84.252.95.102:443
+01/21/2021-08:58:54.030450  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50231 -> 84.252.95.102:443
+01/21/2021-09:03:53.988547  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50232 -> 84.252.95.102:443
+01/21/2021-09:03:55.232312  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50233 -> 84.252.95.102:443
+01/21/2021-09:08:55.236077  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50234 -> 84.252.95.102:443
+01/21/2021-09:08:56.472063  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50235 -> 84.252.95.102:443
+01/21/2021-09:13:56.595997  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50240 -> 84.252.95.102:443
+01/21/2021-09:13:58.232766  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50241 -> 84.252.95.102:443
+01/21/2021-09:18:58.041558  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50242 -> 84.252.95.102:443
+01/21/2021-09:18:59.304203  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50243 -> 84.252.95.102:443
+01/21/2021-09:23:59.317639  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50244 -> 84.252.95.102:443
+01/21/2021-09:24:00.575402  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50245 -> 84.252.95.102:443
+01/21/2021-09:29:00.572459  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50253 -> 84.252.95.102:443
+01/21/2021-09:29:01.832607  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50254 -> 84.252.95.102:443
+01/21/2021-09:34:01.849638  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50255 -> 84.252.95.102:443
+01/21/2021-09:34:03.082993  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50256 -> 84.252.95.102:443
+01/21/2021-09:39:03.078076  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50270 -> 84.252.95.102:443
+01/21/2021-09:39:04.354907  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50271 -> 84.252.95.102:443
+01/21/2021-09:44:04.354139  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50273 -> 84.252.95.102:443
+01/21/2021-09:44:05.604719  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50274 -> 84.252.95.102:443
+01/21/2021-09:49:05.760387  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50275 -> 193.239.84.250:443
+01/21/2021-09:49:06.799721  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50276 -> 193.239.84.250:443
+01/21/2021-09:49:54.103428  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.1.21.2:88 -> 10.1.21.101:50277
+01/21/2021-09:49:54.108778  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.1.21.2:88 -> 10.1.21.101:50278
+01/21/2021-09:54:06.811495  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50283 -> 193.239.84.250:443
+01/21/2021-09:54:07.841889  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50284 -> 193.239.84.250:443
+01/21/2021-09:59:07.889634  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50289 -> 193.239.84.250:443
+01/21/2021-09:59:09.013223  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50290 -> 193.239.84.250:443
+01/21/2021-10:04:09.019269  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50292 -> 193.239.84.250:443
+01/21/2021-10:04:10.589826  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50293 -> 193.239.84.250:443
+01/21/2021-10:09:10.643436  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50297 -> 193.239.84.250:443
+01/21/2021-10:09:12.104698  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50298 -> 193.239.84.250:443
+01/21/2021-10:14:11.671283  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50303 -> 193.239.84.250:443
+01/21/2021-10:14:12.820999  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50304 -> 193.239.84.250:443
+01/21/2021-10:19:12.762977  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50305 -> 193.239.84.250:443
+01/21/2021-10:19:13.976413  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50306 -> 193.239.84.250:443
+01/21/2021-10:24:13.960477  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50307 -> 193.239.84.250:443
+01/21/2021-10:24:15.024052  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50308 -> 193.239.84.250:443
+01/21/2021-10:29:15.064928  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50314 -> 193.239.84.250:443
+01/21/2021-10:29:16.136944  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50315 -> 193.239.84.250:443
+01/21/2021-10:34:16.153939  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50316 -> 193.239.84.250:443
+01/21/2021-10:34:17.263285  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50317 -> 193.239.84.250:443
+01/21/2021-10:39:17.261524  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50322 -> 193.239.84.250:443
+01/21/2021-10:39:18.416138  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50323 -> 193.239.84.250:443
+01/21/2021-10:44:18.429448  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50331 -> 193.239.84.250:443
+01/21/2021-10:44:19.589248  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50332 -> 193.239.84.250:443
+01/21/2021-10:49:19.608225  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50333 -> 84.252.95.102:443
+01/21/2021-10:49:20.646310  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50334 -> 84.252.95.102:443
+01/21/2021-10:54:20.662626  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50335 -> 84.252.95.102:443
+01/21/2021-10:54:21.716125  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50336 -> 84.252.95.102:443
+01/21/2021-10:59:21.668738  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50348 -> 84.252.95.102:443
+01/21/2021-10:59:22.700097  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50349 -> 84.252.95.102:443
+01/21/2021-11:04:22.714824  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50350 -> 84.252.95.102:443
+01/21/2021-11:04:23.933186  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50351 -> 84.252.95.102:443
+01/21/2021-11:09:23.924407  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50352 -> 84.252.95.102:443
+01/21/2021-11:09:25.370999  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50353 -> 84.252.95.102:443
+01/21/2021-11:14:25.092537  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50355 -> 84.252.95.102:443
+01/21/2021-11:14:26.251550  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50356 -> 84.252.95.102:443
+01/21/2021-11:14:27.380255  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50357 -> 84.252.95.102:443
+01/21/2021-11:19:26.271650  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50358 -> 84.252.95.102:443
+01/21/2021-11:19:27.439063  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50359 -> 84.252.95.102:443
+01/21/2021-11:19:28.546462  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50360 -> 84.252.95.102:443
+01/21/2021-11:19:39.586575  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50361 -> 84.252.95.102:443
+01/21/2021-11:24:27.432115  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50363 -> 84.252.95.102:443
+01/21/2021-11:24:28.587925  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50364 -> 84.252.95.102:443
+01/21/2021-11:24:29.706411  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50365 -> 84.252.95.102:443
+01/21/2021-11:24:40.855479  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50370 -> 84.252.95.102:443
+01/21/2021-11:29:28.602438  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50373 -> 84.252.95.102:443
+01/21/2021-11:29:29.662219  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50374 -> 84.252.95.102:443
+01/21/2021-11:29:30.784522  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50375 -> 84.252.95.102:443
+01/21/2021-11:29:41.860850  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50376 -> 84.252.95.102:443
+01/21/2021-11:34:29.670373  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50382 -> 84.252.95.102:443
+01/21/2021-11:34:30.821895  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50383 -> 84.252.95.102:443
+01/21/2021-11:34:31.915273  [**] [1:2027266:4] ET INFO Dotted Quad Host RAR Request [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 10.1.21.101:50384 -> 162.0.224.165:80
+01/21/2021-11:34:31.915273  [**] [1:2031745:1] ET MALWARE Ursnif Payload Request (grab32.rar) [**] [Classification: A Network Trojan was detected] [Priority: 1] {TCP} 10.1.21.101:50384 -> 162.0.224.165:80
+01/21/2021-11:34:32.441093  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50385 -> 84.252.95.102:443
+01/21/2021-11:39:30.853071  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50390 -> 84.252.95.102:443
+01/21/2021-11:39:31.988162  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50391 -> 84.252.95.102:443
+01/21/2021-11:44:31.971001  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50394 -> 84.252.95.102:443
+01/21/2021-11:44:33.337242  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50395 -> 84.252.95.102:443
+01/21/2021-11:49:33.350634  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50397 -> 84.252.95.102:443
+01/21/2021-11:49:34.503099  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50398 -> 84.252.95.102:443
+01/21/2021-11:54:34.524934  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50401 -> 84.252.95.102:443
+01/21/2021-11:54:35.674715  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50402 -> 84.252.95.102:443
+01/21/2021-11:59:35.707936  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50404 -> 84.252.95.102:443
+01/21/2021-11:59:36.844090  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50405 -> 84.252.95.102:443
+01/21/2021-12:04:36.859933  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50406 -> 84.252.95.102:443
+01/21/2021-12:04:38.017964  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50407 -> 84.252.95.102:443
+01/21/2021-12:09:38.021289  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50411 -> 84.252.95.102:443
+01/21/2021-12:09:39.171662  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50412 -> 84.252.95.102:443
+01/21/2021-12:14:39.176033  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50413 -> 84.252.95.102:443
+01/21/2021-12:14:40.333876  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50414 -> 84.252.95.102:443
+01/21/2021-12:19:40.337144  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50415 -> 84.252.95.102:443
+01/21/2021-12:19:41.487981  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50416 -> 84.252.95.102:443
+01/21/2021-12:24:41.486516  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50420 -> 84.252.95.102:443
+01/21/2021-12:24:42.765968  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50421 -> 84.252.95.102:443
+01/21/2021-12:29:42.780290  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50423 -> 84.252.95.102:443
+01/21/2021-12:29:43.922912  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50424 -> 84.252.95.102:443
+01/21/2021-12:34:43.958751  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50431 -> 84.252.95.102:443
+01/21/2021-12:34:45.092410  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50432 -> 84.252.95.102:443
+01/21/2021-12:39:45.010326  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50438 -> 23.33.221.181:443
+01/21/2021-12:39:45.389329  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50439 -> 104.124.102.29:443
+01/21/2021-12:39:45.950767  [**] [1:2028811:2] ET JA3 Hash - [Abuse.ch] Possible Gozi [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50440 -> 172.217.165.10:443
+01/21/2021-12:44:46.073156  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50441 -> 193.239.84.250:443
+01/21/2021-12:44:47.308919  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50442 -> 193.239.84.250:443
+01/21/2021-12:49:47.329022  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50444 -> 193.239.84.250:443
+01/21/2021-12:49:48.518096  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50445 -> 193.239.84.250:443
+01/21/2021-12:54:48.562689  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50448 -> 193.239.84.250:443
+01/21/2021-12:54:49.763109  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50449 -> 193.239.84.250:443
+01/21/2021-12:59:49.766758  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50453 -> 193.239.84.250:443
+01/21/2021-12:59:50.979507  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50454 -> 193.239.84.250:443
+01/21/2021-13:04:50.979220  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50456 -> 193.239.84.250:443
+01/21/2021-13:04:52.174009  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50457 -> 193.239.84.250:443
+01/21/2021-13:09:52.190578  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50459 -> 193.239.84.250:443
+01/21/2021-13:09:53.385646  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50460 -> 193.239.84.250:443
+01/21/2021-13:14:53.365129  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50462 -> 193.239.84.250:443
+01/21/2021-13:14:54.557664  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50463 -> 193.239.84.250:443
+01/21/2021-13:19:54.567342  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50464 -> 193.239.84.250:443
+01/21/2021-13:19:56.033182  [**] [1:2028759:2] ET JA3 Hash - [Abuse.ch] Possible Quakbot [**] [Classification: Unknown Traffic] [Priority: 3] {TCP} 10.1.21.101:50465 -> 193.239.84.250:443
+12/01/2020-23:41:08.558836  [**] [1:2260002:1] SURICATA Applayer Detect protocol only one direction [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.12.1.2:88 -> 10.12.1.101:49768
+12/01/2020-23:41:44.006431  [**] [1:2018959:4] ET POLICY PE EXE or DLL Windows file download HTTP [**] [Classification: Potential Corporate Privacy Violation] [Priority: 1] {TCP} 5.44.43.72:80 -> 10.12.1.101:49790
+12/01/2020-23:41:44.006431  [**] [1:2019822:7] ET INFO WinHttpRequest Downloading EXE [**] [Classification: A Network Trojan was detected] [Priority: 1] {TCP} 5.44.43.72:80 -> 10.12.1.101:49790
+12/01/2020-23:41:44.006431  [**] [1:2022653:2] ET MALWARE Likely Evil EXE download from WinHttpRequest non-exe extension [**] [Classification: A Network Trojan was detected] [Priority: 1] {TCP} 5.44.43.72:80 -> 10.12.1.101:49790
+12/01/2020-23:41:44.006431  [**] [1:2014520:7] ET INFO EXE - Served Attached HTTP [**] [Classification: Misc activity] [Priority: 3] {TCP} 5.44.43.72:80 -> 10.12.1.101:49790
+12/01/2020-23:42:35.741845  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 167.71.138.137:443 -> 10.12.1.101:49804
+12/01/2020-23:44:12.699770  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49813
+12/01/2020-23:44:18.836837  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49814
+12/01/2020-23:56:18.782683  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49834
+12/01/2020-23:56:22.681773  [**] [1:2210054:1] SURICATA STREAM excessive retransmissions [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49834
+12/02/2020-00:02:27.735955  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49836
+12/02/2020-00:02:29.869142  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49837
+12/02/2020-00:02:30.288563  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49838
+12/02/2020-00:02:35.271542  [**] [1:2023883:4] ET DNS Query to a *.top domain - Likely Hostile [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 10.12.1.101:64049 -> 10.12.1.2:53
+12/02/2020-00:02:36.925789  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49842
+12/02/2020-00:07:29.825315  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49846
+12/02/2020-00:07:30.539932  [**] [1:2023883:4] ET DNS Query to a *.top domain - Likely Hostile [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 10.12.1.101:60534 -> 10.12.1.2:53
+12/02/2020-00:07:31.771741  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49847
+12/02/2020-00:12:30.537309  [**] [1:2023883:4] ET DNS Query to a *.top domain - Likely Hostile [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 10.12.1.101:51340 -> 10.12.1.2:53
+12/02/2020-00:12:32.105104  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49849
+12/02/2020-00:17:32.889035  [**] [1:2023883:4] ET DNS Query to a *.top domain - Likely Hostile [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 10.12.1.101:53999 -> 10.12.1.2:53
+12/02/2020-00:17:35.221188  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49851
+12/02/2020-00:22:36.285948  [**] [1:2023883:4] ET DNS Query to a *.top domain - Likely Hostile [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 10.12.1.101:64862 -> 10.12.1.2:53
+12/02/2020-00:22:37.917933  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49853
+12/02/2020-00:26:21.340528  [**] [1:2023883:4] ET DNS Query to a *.top domain - Likely Hostile [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 10.12.1.101:59643 -> 10.12.1.2:53
+12/02/2020-00:26:49.045182  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49856
+12/02/2020-00:27:38.704495  [**] [1:2023883:4] ET DNS Query to a *.top domain - Likely Hostile [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 10.12.1.101:62827 -> 10.12.1.2:53
+12/02/2020-00:27:40.260103  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49857
+12/02/2020-00:32:41.097002  [**] [1:2023883:4] ET DNS Query to a *.top domain - Likely Hostile [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 10.12.1.101:55260 -> 10.12.1.2:53
+12/02/2020-00:32:42.779440  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49862
+12/02/2020-00:37:43.725570  [**] [1:2023883:4] ET DNS Query to a *.top domain - Likely Hostile [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 10.12.1.101:55194 -> 10.12.1.2:53
+12/02/2020-00:37:45.249471  [**] [1:2011540:7] ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O) [**] [Classification: Not Suspicious Traffic] [Priority: 3] {TCP} 206.189.56.140:443 -> 10.12.1.101:49864

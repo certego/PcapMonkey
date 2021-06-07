@@ -1,0 +1,29 @@
+7/6/2021 -- 09:51:47 - <Notice> - This is Suricata version 6.0.2 RELEASE running in USER mode
+7/6/2021 -- 09:51:47 - <Info> - CPUs/cores online: 4
+7/6/2021 -- 09:51:49 - <Info> - fast output device (regular) initialized: fast.log
+7/6/2021 -- 09:51:49 - <Info> - eve-log output device (regular) initialized: eve.json
+7/6/2021 -- 09:52:30 - <Info> - 2 rule files processed. 22746 rules successfully loaded, 0 rules failed
+7/6/2021 -- 09:52:30 - <Info> - Threshold config parsed: 0 rule(s) found
+7/6/2021 -- 09:52:31 - <Info> - 22749 signatures processed. 1267 are IP-only rules, 3880 are inspecting packet payload, 17384 inspect application layer, 105 are decoder event only
+7/6/2021 -- 09:54:03 - <Info> - Argument /pcap/ was a directory
+7/6/2021 -- 09:54:03 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
+7/6/2021 -- 09:54:03 - <Notice> - all 1 packet processing threads, 2 management threads initialized, engine started.
+7/6/2021 -- 09:54:03 - <Info> - Starting directory run for /pcap/
+7/6/2021 -- 09:54:03 - <Info> - Processing pcaps directory /pcap/, files must be newer than 0 and older than 18446744073709550616
+7/6/2021 -- 09:54:03 - <Info> - Found "/pcap//.getkeep" at 1622905629394
+7/6/2021 -- 09:54:03 - <Info> - Found "/pcap//2020-12-03-traffic-analysis-quiz.pcap" at 1622905629450
+7/6/2021 -- 09:54:03 - <Info> - Found "/pcap//2021-01-21-traffic-analysis-exercise.pcap" at 1611255488000
+7/6/2021 -- 09:54:03 - <Info> - No packets with invalid checksum, assuming checksum offloading is NOT used
+7/6/2021 -- 09:54:08 - <Info> - pcap file /pcap//2021-01-21-traffic-analysis-exercise.pcap end of file reached (pcap err code 0)
+7/6/2021 -- 09:54:08 - <Info> - Processed file /pcap//2021-01-21-traffic-analysis-exercise.pcap, processed up to 1611255488000
+7/6/2021 -- 09:54:08 - <Error> - [ERRCODE: SC_ERR_FOPEN(44)] - truncated dump file; tried to read 4 file header bytes, only got 0
+7/6/2021 -- 09:54:08 - <Warning> - [ERRCODE: SC_ERR_PCAP_DISPATCH(20)] - Failed to init pcap file /pcap//.getkeep, skipping
+7/6/2021 -- 09:54:09 - <Info> - pcap file /pcap//2020-12-03-traffic-analysis-quiz.pcap end of file reached (pcap err code 0)
+7/6/2021 -- 09:54:09 - <Info> - Processed file /pcap//2020-12-03-traffic-analysis-quiz.pcap, processed up to 1622905629450
+7/6/2021 -- 09:54:09 - <Info> - Updating processed to 1622905629450
+7/6/2021 -- 09:54:09 - <Info> - Directory run mode complete
+7/6/2021 -- 09:54:09 - <Notice> - Signal Received.  Stopping engine.
+7/6/2021 -- 09:54:09 - <Info> - time elapsed 6.494s
+7/6/2021 -- 09:54:10 - <Notice> - Pcap-file module read 2 files, 30678 packets, 11746490 bytes
+7/6/2021 -- 09:54:10 - <Info> - Alerts: 0
+7/6/2021 -- 09:54:10 - <Info> - cleaning up signature grouping structure... complete

@@ -1,0 +1,6 @@
+# Suricata log files
+./logs/suricata/eve.json
+./logs/suricata/*.log
+
+# Zeek log files
+./logs/zeek/*.log
