@@ -23,6 +23,8 @@ Install Docker-CE and docker-compose:
 - https://docs.docker.com/install/linux/docker-ce/ubuntu/
 - https://docs.docker.com/compose/install/
 
+Then just clone this repo to your local machine, and you're ready to go. All the commands listed in this tutorial should be launched from whithin the root folder of this project.
+
 ## Uninstall
 To uninstall and remove all files delete all containers with
 ```
