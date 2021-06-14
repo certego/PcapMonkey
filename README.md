@@ -6,13 +6,13 @@ Pcapmonkey uses the default docker container for most images and aims to be easy
 
 Video tutorial: [Startup](https://www.youtube.com/watch?v=h0bardzCOM4), [Pcap Analysis](https://www.youtube.com/watch?v=zVlFRs2vCQg)
 
-## PcapMonkey is partecipating to GSoC 2021 thanks to Honeynet project!
+## PcapMonkey is participating in GSoC 2021 thanks to Honeynet project!
 ### The Honeynet Project
 <a href="https://www.honeynet.org"> <img style="border: 0.2px solid black" width=115 height=150 src="images/honeynet_logo.png" alt="Honeynet.org logo"> </a>
 
 ### Google Summer Of Code
 
-Since its birth, this project has been partecipating to the GSoC under the Honeynet Project!
+Since its birth, this project has been participating in the GSoC under the Honeynet Project!
 
 * 2021: [Projects available](https://www.honeynet.org/gsoc/gsoc-2021/google-summer-of-code-2021-project-ideas/)
 
