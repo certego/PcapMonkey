@@ -61,7 +61,7 @@ At the first access you should see the following screen:
 
 Click **"Explore on my own"** to close the window.
 
-Now we can import the panoptikon index patterns, they will be used to access our pcap data. To do so click the Management icon (the cog):
+Now we can import the pcapmonkey index patterns, they will be used to access our pcap data. To do so click the Management icon (the cog):
 
 ![Kibana cog](https://github.com/certego/pcapmonkey/raw/master/images/kibana_managment.png)
 
@@ -126,7 +126,7 @@ To clean logs on disk (everything on logs folder) run the following script:
 
 If you have analyzed the same pcap dozen of times (to test out suricata rules) it could be useful to delete old data from elasticsearch. To do so you can open the Kibana web interface and follow this path:
 ```
-Management -> Index Management -> select `panoptikon_original_ts` -> click "manage index" -> delete index
+Management -> Index Management -> select `pcapmonkey_original_ts` -> click "manage index" -> delete index
 ```
 
 # Advanced Usage
