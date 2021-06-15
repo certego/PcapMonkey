@@ -1,0 +1,7 @@
+# Packet capture files
+*.pcap
+*.pcapng
+
+# Log Files
+eve.json
+*.log
