@@ -3,7 +3,7 @@ version: '3.2'
 services:
     evtxtoelk:
         container_name: pcapmonkey_evtxtoelk
-        image: certego/evtxtoelk
+        image: certego/evtxtoelk:v1.1.0
         entrypoint:
             - python
             - evtxtoelk.py
