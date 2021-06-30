@@ -34,7 +34,7 @@ services:
             - ./config/filebeat/modules.d:/usr/share/filebeat/modules.d:ro
             - ./config/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
             - ./logs/suricata:/var/log/suricata:ro
-            - ./logs/zeek:/var/log/zeek:ro
+            - ./logs/zeek:/var/log/bro/current:ro
 
     logstash:
         container_name: pcapmonkey_logstash
