@@ -1,6 +1,6 @@
 @load policy/tuning/json-logs.zeek
 # Enable logging of memory, packet and lag statistics.
-@load misc/stats
+# @load misc/stats
 
 # Enable capture loss tcp statistics
 @load policy/misc/capture-loss
