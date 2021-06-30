@@ -88,7 +88,7 @@ services:
 
     zeek:
         container_name: pcapmonkey_zeek
-        image: certego/zeek:3.1.2-1
+        image: certego/zeek:4.0.2
         hostname: zeek
         working_dir: /var/log/zeek
         entrypoint:
