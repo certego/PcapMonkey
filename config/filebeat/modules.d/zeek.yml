@@ -65,7 +65,7 @@
   ssl:
     enabled: true
   stats:
-    enabled: true
+    enabled: false
   syslog:
     enabled: true
   traceroute:
