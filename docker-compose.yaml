@@ -113,7 +113,7 @@ services:
             - -s
             - "2000"
             - -i
-            - windows_events_original_ts
+            - winlogbeat
         depends_on:
             - elasticsearch
         volumes:
