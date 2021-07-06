@@ -163,20 +163,20 @@ Now you can find the Event logs in `windows_events_original_ts` and in `windows_
 If you would like like to use ECS (elastic common schema) to process your Zeek and Suricata logs you should launch also ``filebeat``
 
 Start the Elasticsearch with filebeat container:
-```
+```bash
 sudo docker-compose up -d elasticsearch filebeat kibana
 ```
 
-Create a new index for filebeat.
+Import the `filebeat.ndjson` objects to Kibana.
 
-```Stack Management -> Index Patterns -> Create new pattern.```
+```Stack Management -> Saved Objects -> Import``` 
 
-![Kibana Index Patterns](./images/kibana_management_filebeat.png)
+The `filebeat.ndjson` objects are:
 
-Enter index pattern name `filebeat-*` and select `@timestamp` as the time field.
+| Object Name                 | Description                                        |
+|-----------------------------|----------------------------------------------------|
+| filebeat-*                  | @timestamp indexed Filebeat Patterns.              |
+| file*                       | Filebeat Patterns indexed with log ingestion time. |
+| winlogbeat*                 | Windows Event Log Pattern indexed with ingestion time. |
 
-![New Index Pattern](./images/kibana_new_index_filebeat.png)
-
-You can view your logs in `filebeat-*` index in the Discover section.
-
-![Filebeat Index Pattern](./images/kibana_index_dropdown_filebeat.png)
+You can now analyze the data in the Discover section.
