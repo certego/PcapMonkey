@@ -1,0 +1,60 @@
+name: Test Elasticsearch data
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master, develop ]
+
+jobs:
+  test-filebeat:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Start containers
+        run: docker-compose up -d elasticsearch filebeat
+
+      - name: Start Zeek
+        require: Start Containers
+        run: docker-compose up zeek
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Test Elasticsearch data
+        run: python3 ./test/test.py
+
+      - name: Stop Containers
+        run: docker-compose down -v
+
+  test-evtxtoelk:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Start containers
+        run: docker-compose up -d elasticsearch
+
+      - name: Start evtxtoelk
+        require: Start Containers
+        run: docker-compose up evtxtoelk
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Test Elasticsearch data
+        run: python3 ./test/test.py
+
+      - name: Stop Containers
+        run: docker-compose down -v      

@@ -7,9 +7,9 @@ elastic_client = Elasticsearch(hosts=["localhost:9200"])
 
 # Elasticsearch query data
 query_body = {
-  "query": {
-    "match_all": {}
-  }
+    "query": {
+        "match_all": {}
+    }
 }
 
 elastic_data = elastic_client.search(index="filebeat*", size=10000, body=query_body)
@@ -27,23 +27,37 @@ for hit in hits_list:
 
     del hit["_source"]["log"]["offset"]
     del hit["_source"]["host"]
-    # del hit["_source"]["event"]["id"]
+    if 'id' in hit["_source"]["event"]: del hit["_source"]["event"]["id"]
 
     # Suricata fields
     del hit["_source"]["event"]["ingested"]
 
     # Zeek fields
     del hit["_source"]["event"]["created"]
-    # del hit["_source"]["zeek"]["session_id"]
-    # del hit["_source"]["zeek"]["files"]["session_ids"]
-    # del hit["_source"]["zeek"]["files"]["analyzers"]
+    if 'original' in hit["_source"]["event"]: del hit["_source"]["event"]["original"]
     
+    if 'zeek' in hit["_source"]:
+        if 'session_id' in hit["_source"]["zeek"]: del hit["_source"]["zeek"]["session_id"]
+        if 'files' in hit["_source"]["zeek"]: 
+            if 'session_ids' in hit["_source"]["zeek"]["files"]: del hit["_source"]["zeek"]["files"]["session_ids"]
+            if 'analyzers' in hit["_source"]["zeek"]["files"]: del hit["_source"]["zeek"]["files"]["analyzers"]
+
+# Sort the events by @timestamp, and log file path    
 elastic_data = sorted(elastic_data["hits"]["hits"],
-       key = lambda x: (x["_source"]["@timestamp"]) )
+       key = lambda x: (x["_source"]["@timestamp"], x["_source"]["log"]["file"]["path"]) )
 
 
 test_data = json.dumps(elastic_data, sort_keys=True, indent=4)
 
-# Write the data to out.json for comparision
-with open("test_comb.json", "w") as outfile:
-    outfile.write(test_data)
+with open("expected_zeek.json","r") as original_data_file:
+    original_data = original_data_file.read()
+
+if(original_data == test_data):
+    print("Test passed!")
+    exit(0)
+else:
+    print("Test Failed")
+    exit(1)
+
+# with open("test_suri.json", "w") as outfile:
+#     outfile.write(test_data)
