@@ -28,6 +28,7 @@ for hit in hits_list:
     del hit["_source"]["log"]["offset"]
     del hit["_source"]["host"]
     if 'id' in hit["_source"]["event"]: del hit["_source"]["event"]["id"]
+    if 'network' in hit["_source"] and 'protocol' in hit["_source"]["network"]: del hit["_source"]["network"]["protocol"]
 
     # Suricata fields
     del hit["_source"]["event"]["ingested"]
@@ -58,6 +59,3 @@ if(original_data == test_data):
 else:
     print("Test Failed")
     exit(1)
-
-# with open("test_suri.json", "w") as outfile:
-#     outfile.write(test_data)
