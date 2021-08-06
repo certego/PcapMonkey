@@ -15,6 +15,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Prepare Setup
+        run: ./prepare.sh
+
       - name: Start containers
         run: docker-compose up -d elasticsearch filebeat
 
@@ -28,7 +31,7 @@ jobs:
         run: docker-compose up zeek
 
       - name: Sleep
-        run: ./test/sleep.sh 180
+        run: ./test/sleep.sh 60
 
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
@@ -67,7 +70,7 @@ jobs:
         run: docker-compose up evtxtoelk
 
       - name: Sleep
-        run: ./test/sleep.sh 180
+        run: ./test/sleep.sh 60
 
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
