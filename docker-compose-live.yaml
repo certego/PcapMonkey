@@ -1,0 +1,33 @@
+version: '3.2'
+
+services:
+    suricata:
+        container_name: pcapmonkey_suricata
+        image: jasonish/suricata:6.0.0
+        hostname: suricata
+        working_dir: /var/log/suricata
+        network_mode: "host"
+        entrypoint:
+            - suricata
+            - --runmode=single
+            - -i
+            - wlo1
+        volumes:
+            - ./config/suricata/etc:/etc/suricata:ro
+            - ./config/suricata/rules:/var/lib/suricata/rules/
+            - ./pcap:/pcap
+            - ./logs/suricata:/var/log/suricata
+
+    zeek:
+        container_name: pcapmonkey_zeek
+        image: certego/zeek:4.0.2
+        hostname: zeek
+        network_mode: host
+        cap_add:
+            - NET_ADMIN
+        volumes:
+            - ./config/zeek/site:/zeek/share/zeek/site:ro
+            - ./config/zeek/cluster:/zeek/share/zeek/cluster:ro
+            - ./pcap:/pcap
+            - ./logs/zeek:/var/log/zeek
+            - ./logs/zeek/extracted_files:/opt/zeek/extracted
