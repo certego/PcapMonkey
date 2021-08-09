@@ -22,9 +22,12 @@ services:
         container_name: pcapmonkey_zeek
         image: certego/zeek:4.0.2
         hostname: zeek
-        network_mode: host
+        network_mode: "host"
         cap_add:
             - NET_ADMIN
+        entrypoint:
+            - /live-analysis.sh
+            - wlo1
         volumes:
             - ./config/zeek/site:/zeek/share/zeek/site:ro
             - ./config/zeek/cluster:/zeek/share/zeek/cluster:ro
