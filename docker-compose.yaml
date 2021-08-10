@@ -18,6 +18,10 @@ services:
             memlock: 
                 soft: -1
                 hard: -1
+        expose:
+            - "9200"
+        ports:
+            - "127.0.0.1:9200:9200"
         volumes:
             - elasticsearch_data:/usr/share/elasticsearch/data
         expose:

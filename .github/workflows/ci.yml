@@ -1,0 +1,89 @@
+name: Test Elasticsearch data
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master, develop ]
+
+jobs:
+  test-filebeat:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Prepare Setup
+        run: ./prepare.sh
+
+      - name: Start containers
+        run: docker-compose up -d elasticsearch filebeat
+
+      - name: Sleep
+        run: ./test/sleep.sh 180
+
+      - name: Copy Assets
+        run: cp ./test/assets/test-file.pcap ./pcap/
+
+      - name: Start Zeek
+        run: docker-compose up zeek
+
+      - name: Sleep
+        run: ./test/sleep.sh 60
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      
+      - name: Install Elasticsearch python module 
+        run: pip install elasticsearch
+
+      - name: Test Elasticsearch data
+        run: |
+          cd ./test/
+          python3 test.py
+
+      - name: Stop Containers
+        run: docker-compose down -v
+
+  test-evtxtoelk:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Start containers
+        run: docker-compose up -d elasticsearch
+
+      - name: Sleep
+        run: ./test/sleep.sh 180
+
+      - name: Copy Assets
+        run: cp ./test/assets/evtx/* ./import_event_logs/
+
+      - name: Start evtxtoelk
+        run: docker-compose up evtxtoelk
+
+      - name: Sleep
+        run: ./test/sleep.sh 60
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install Elasticsearch python module 
+        run: pip install elasticsearch
+          
+      - name: Test Elasticsearch data
+        run: |
+          cd ./test/
+          python3 test_evtxtoelk.py
+
+      - name: Stop Containers
+        run: docker-compose down -v
