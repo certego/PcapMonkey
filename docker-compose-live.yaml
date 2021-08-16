@@ -29,7 +29,7 @@ services:
             - /live-analysis.sh
             - wlo1
         volumes:
-            - ./config/zeek/site:/zeek/share/zeek/site:ro
+            - ./config/zeek/site:/zeek/share/zeek/site
             - ./config/zeek/cluster:/zeek/share/zeek/cluster:ro
             - ./pcap:/pcap
             - ./logs/zeek:/var/log/zeek
