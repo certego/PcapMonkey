@@ -4,7 +4,7 @@ services:
 
     elasticsearch:
         container_name: pcapmonkey_elasticsearch
-        image: docker.elastic.co/elasticsearch/elasticsearch:7.11.2
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.13.2
         hostname: elasticsearch
         environment: 
             - node.name=pcapmonkey
@@ -18,6 +18,10 @@ services:
             memlock: 
                 soft: -1
                 hard: -1
+        expose:
+            - "9200"
+        ports:
+            - "127.0.0.1:9200:9200"
         volumes:
             - elasticsearch_data:/usr/share/elasticsearch/data
         expose:
@@ -27,7 +31,7 @@ services:
 
     filebeat:
         container_name: pcapmonkey_filebeat
-        image: docker.elastic.co/beats/filebeat:7.11.2
+        image: docker.elastic.co/beats/filebeat:7.13.2
         depends_on:
             - elasticsearch
         volumes:
@@ -38,7 +42,7 @@ services:
 
     logstash:
         container_name: pcapmonkey_logstash
-        image: docker.elastic.co/logstash/logstash:7.11.2
+        image: docker.elastic.co/logstash/logstash:7.13.2
         hostname: logstash
         environment:
             - "LS_JAVA_OPTS=-Xms512m -Xmx512m"
@@ -54,7 +58,7 @@ services:
 
     kibana:
         container_name: pcapmonkey_kibana
-        image: docker.elastic.co/kibana/kibana:7.11.2
+        image: docker.elastic.co/kibana/kibana:7.13.2
         hostname: kibana
         environment:
             ELASTICSEARCH_URL: http://elasticsearch:9200
@@ -88,7 +92,7 @@ services:
 
     zeek:
         container_name: pcapmonkey_zeek
-        image: certego/zeek:3.1.2-1
+        image: certego/zeek:4.0.2
         hostname: zeek
         working_dir: /var/log/zeek
         entrypoint:
@@ -97,10 +101,27 @@ services:
             - local
             - "Site::local_nets += { 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 }"
         volumes:
-            - ./config/zeek/site:/zeek/share/zeek/site:ro
+            - ./config/zeek/site:/zeek/share/zeek/site
             - ./pcap:/pcap
             - ./logs/zeek:/var/log/zeek
             - ./logs/zeek/extracted_files:/opt/zeek/extracted
+
+    evtxtoelk:
+        container_name: pcapmonkey_evtxtoelk
+        image: certego/evtxtoelk:v1.1.0
+        entrypoint:
+            - python
+            - evtxtoelk.py
+            - /var/log/event_logs
+            - elasticsearch:9200
+            - -s
+            - "2000"
+            - -i
+            - winlogbeat
+        depends_on:
+            - elasticsearch
+        volumes:
+            - ./import_event_logs:/var/log/event_logs:ro
 
 volumes:
 

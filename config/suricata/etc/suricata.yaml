@@ -490,7 +490,7 @@ logging:
       enabled: yes
       # type: json
   - file:
-      enabled: yes
+      enabled: no
       level: info
       filename: /var/log/suricata/suricata.log
       # type: json

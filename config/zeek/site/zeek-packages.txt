@@ -1,0 +1,4 @@
+zeek/salesforce/ja3
+zeek/jsiwek/zeek-cryptomining
+zeek/hosom/file-extraction
+zeek/corelight/log-add-http-post-bodies
