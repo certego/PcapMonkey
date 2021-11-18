@@ -1,3 +1,5 @@
 /logs/**
 /pcap/**
 /imported_event_logs/**
+/config/suricata/rules/classification.config
+/config/suricata/rules/suricata.rules
