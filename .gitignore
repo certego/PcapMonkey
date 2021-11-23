@@ -1,5 +1,8 @@
 /logs/**
+!/logs/.gitignore
 /pcap/**
+!/pcap/.gitignore
 /imported_event_logs/**
+!/imported_event_logs/.gitignore
 /config/suricata/rules/classification.config
 /config/suricata/rules/suricata.rules
