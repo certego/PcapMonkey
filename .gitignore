@@ -2,7 +2,6 @@
 !/logs/.gitkeep
 /pcap/**
 !/pcap/.gitkeep
-/imported_event_logs/**
-!/imported_event_logs/.gitkeep
+/import_event_logs/*.evtx
 /config/suricata/rules/classification.config
 /config/suricata/rules/suricata.rules
