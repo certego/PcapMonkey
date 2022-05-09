@@ -1,0 +1,8 @@
+/logs/**
+!/logs/.gitkeep
+/pcap/**
+!/pcap/.gitkeep
+/imported_event_logs/**
+!/imported_event_logs/.gitkeep
+/config/suricata/rules/classification.config
+/config/suricata/rules/suricata.rules
