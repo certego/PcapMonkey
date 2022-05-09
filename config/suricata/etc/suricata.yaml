@@ -131,7 +131,7 @@ outputs:
             # Enable the logging of tagged packets for rules using the
             # "tag" keyword.
             tagged-packets: yes
-        - anomaly:
+        #- anomaly:
             # Anomaly log records describe unexpected conditions such
             # as truncated packets, packets with invalid IP/UDP/TCP
             # length values, and other events that render the packet
@@ -156,34 +156,34 @@ outputs:
             # By default, anomaly logging is enabled. When anomaly
             # logging is enabled, applayer anomaly reporting is
             # also enabled.
-            enabled: yes
+            #enabled: yes
             #
             # Choose one or more types of anomaly logging and whether to enable
             # logging of the packet header for packet anomalies.
-            types:
+            #types:
               # decode: no
               # stream: no
               # applayer: yes
             #packethdr: no
-        - http:
-            extended: yes     # enable this for extended logging information
+        #- http:
+            #extended: yes     # enable this for extended logging information
             # custom allows additional HTTP fields to be included in eve-log.
             # the example below adds three additional fields when uncommented
-            custom: [Accept-Encoding, Accept-Language, Authorization, Forwarded, From, Referer, Via]
+            #custom: [Accept-Encoding, Accept-Language, Authorization, Forwarded, From, Referer, Via]
             # set this value to one and only one from {both, request, response}
             # to dump all HTTP headers for every HTTP request and/or response
             # dump-all-headers: none
-        - dns:
+        #- dns:
             # This configuration uses the new DNS logging format,
             # the old configuration is still available:
             # https://suricata.readthedocs.io/en/latest/output/eve/eve-json-output.html#dns-v1-format
 
             # As of Suricata 5.0, version 2 of the eve dns output
             # format is the default.
-            version: 2
+            #version: 2
 
             # Enable/disable this logger. Default: enabled.
-            enabled: yes
+            #enabled: yes
 
             # Control logging of requests and responses:
             # - requests: enable logging of DNS queries
@@ -201,15 +201,15 @@ outputs:
             # DNS record types to log, based on the query type.
             # Default: all.
             #types: [a, aaaa, cname, mx, ns, ptr, txt]
-        - tls:
-            extended: yes     # enable this for extended logging information
+        #- tls:
+            #extended: yes     # enable this for extended logging information
             # output TLS transaction where the session is resumed using a
             # session id
             #session-resumption: no
             # custom controls which TLS fields that are included in eve-log
-            custom: [subject, issuer, session_resumed, serial, fingerprint, sni, version, not_before, not_after, certificate]
-        - files:
-            force-magic: no   # force logging magic on all logged files
+            #custom: [subject, issuer, session_resumed, serial, fingerprint, sni, version, not_before, not_after, certificate]
+        #- files:
+            #force-magic: no   # force logging magic on all logged files
             # force logging of checksums, available hash functions are md5,
             # sha1 and sha256
             #force-hash: [md5]
@@ -217,40 +217,40 @@ outputs:
         #    alerts: yes      # log alerts that caused drops
         #    flows: all       # start or all: 'start' logs only a single drop
         #                     # per flow direction. All logs each dropped pkt.
-        - smtp:
-            extended: yes # enable this for extended logging information
+        #- smtp:
+            #extended: yes # enable this for extended logging information
             # this includes: bcc, message-id, subject, x_mailer, user-agent
             # custom fields logging from the list:
             #  reply-to, bcc, message-id, subject, x-mailer, user-agent, received,
             #  x-originating-ip, in-reply-to, references, importance, priority,
             #  sensitivity, organization, content-md5, date
-            custom: [reply-to, bcc, message-id, subject, x-mailer, user-agent, received, x-originating-ip, in-reply-to, references, organization, date]
+            #custom: [reply-to, bcc, message-id, subject, x-mailer, user-agent, received, x-originating-ip, in-reply-to, references, organization, date]
             # output md5 of fields: body, subject
             # for the body you need to set app-layer.protocols.smtp.mime.body-md5
             # to yes
             #md5: [body, subject]
 
         #- dnp3
-        - ftp
-        - rdp
-        - nfs
-        - smb
-        - tftp
-        - ikev2
-        - dcerpc
-        - krb5
-        - snmp
-        - rfb
-        - sip
-        - dhcp:
-            enabled: yes
-            # When extended mode is on, all DHCP messages are logged
-            # with full detail. When extended mode is off (the
-            # default), just enough information to map a MAC address
-            # to an IP address is logged.
-            extended: no
-        - ssh
-        - mqtt:
+        #- ftp
+        #- rdp
+        #- nfs
+        #- smb
+        #- tftp
+        #- ikev2
+        #- dcerpc
+        #- krb5
+        #- snmp
+        #- rfb
+        #- sip
+        #- dhcp:
+        #    enabled: yes
+        #    # When extended mode is on, all DHCP messages are logged
+        #    # with full detail. When extended mode is off (the
+        #    # default), just enough information to map a MAC address
+        #    # to an IP address is logged.
+        #    extended: no
+        #- ssh
+        #- mqtt
             # passwords: yes           # enable output of passwords
         # HTTP2 logging. HTTP2 support is currently experimental and
         # disabled by default. To enable, uncomment the following line
@@ -263,7 +263,7 @@ outputs:
         #     deltas: no        # include delta values
         
         # bi-directional flows
-        - flow
+        #- flow
         # uni-directional flows
         #- netflow
 
@@ -779,7 +779,13 @@ app-layer:
       enabled: yes
 
     sip:
-      #enabled: no
+      enabled: yes
+    
+    mqtt:
+      enabled: yes
+
+    rdp:
+      enabled: yes
 
 # Limit for the maximum number of asn1 frames to decode (default 256)
 asn1-max-frames: 256
