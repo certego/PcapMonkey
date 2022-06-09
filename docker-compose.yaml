@@ -32,6 +32,7 @@ services:
     filebeat:
         container_name: pcapmonkey_filebeat
         image: docker.elastic.co/beats/filebeat:7.17.3
+        command: filebeat -e -strict.perms=false
         depends_on:
             - elasticsearch
         volumes:
