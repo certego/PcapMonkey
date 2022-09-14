@@ -24,8 +24,7 @@ services:
             - "127.0.0.1:9200:9200"
         volumes:
             - elasticsearch_data:/usr/share/elasticsearch/data
-        expose:
-            - "9200"
+        
         healthcheck:
             test: curl -XGET 'localhost:9200/_cluster/health?wait_for_status=yellow&timeout=180s&pretty'
 
