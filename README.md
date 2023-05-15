@@ -19,40 +19,39 @@ Since its birth, this project has been participating in the GSoC under the Honey
 Stay tuned for the upcoming GSoC! Join the [Honeynet Slack chat](https://gsoc-slack.honeynet.org/) for more info.
 
 ## Install & uninstall
-Install Docker-CE and docker-compose:
+Install Docker-CE:
 - https://docs.docker.com/install/linux/docker-ce/ubuntu/
-- https://docs.docker.com/compose/install/
 
 Then just clone this repo to your local machine, and you're ready to go. All the commands listed in this tutorial should be launched from whithin the root folder of this project.
 
 ## Uninstall
 To uninstall and remove all files, delete all containers with
 ```
-sudo docker-compose down -v
+sudo docker compose down -v
 ```
 Then you can safely delete this repository.
 
 ## Basic Usage
 To analyze a Packet Capture file, put it to the `./pcap/` and run:
 ```bash
-sudo docker-compose up -d elasticsearch filebeat kibana
+sudo docker compose up -d elasticsearch filebeat kibana
 ```
 
 Then download the Open-ET Rules for suricata.
 ```bash
-sudo docker-compose run --entrypoint='suricata-update -f' suricata
+sudo docker compose run --entrypoint='suricata-update -f' suricata
 ```
 
 Finally, start the Suricata and Zeek containers to analyze the pcap.
 ```bash
-sudo docker-compose up suricata zeek
+sudo docker compose up suricata zeek
 ```
 
 ### Analyzing Windows Event Logs
 
 Put the `.evtx` file to be analyzed to `import_event_logs/` and start [evtxtoelk](https://github.com/certego/evtxtoelk).
 ```bash
-sudo docker-compose up evtxtoelk
+sudo docker compose up evtxtoelk
 ```
 Check [this wiki](https://github.com/certego/PcapMonkey/wiki/2.-Analyzing-files) for detailed instructions.
 
