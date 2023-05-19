@@ -1,0 +1,127 @@
+version: '3.2'
+
+services:
+
+    elasticsearch:
+        container_name: pcapmonkey_elasticsearch
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.17.3-arm64
+        hostname: elasticsearch
+        environment: 
+            - node.name=pcapmonkey
+            - bootstrap.memory_lock=true
+            - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+            - discovery.type=single-node
+            - cluster.routing.allocation.disk.watermark.low=99%
+            - cluster.routing.allocation.disk.watermark.high=99%
+            - cluster.routing.allocation.disk.watermark.flood_stage=99%
+        ulimits:
+            memlock: 
+                soft: -1
+                hard: -1
+        expose:
+            - "9200"
+        ports:
+            - "127.0.0.1:9200:9200"
+        volumes:
+            - elasticsearch_data:/usr/share/elasticsearch/data
+        healthcheck:
+            test: curl -XGET 'localhost:9200/_cluster/health?wait_for_status=yellow&timeout=180s&pretty'
+
+    filebeat:
+        container_name: pcapmonkey_filebeat
+        image: docker.elastic.co/beats/filebeat:7.17.3-arm64
+        depends_on:
+            - elasticsearch
+        volumes:
+            - ./config/filebeat/modules.d:/usr/share/filebeat/modules.d:ro
+            - ./config/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+            - ./logs/suricata:/var/log/suricata:ro
+            - ./logs/zeek:/var/log/bro/current:ro
+
+    logstash:
+        container_name: pcapmonkey_logstash
+        image: docker.elastic.co/logstash/logstash:7.17.3-arm64
+        hostname: logstash
+        environment:
+            - "LS_JAVA_OPTS=-Xms512m -Xmx512m"
+        depends_on: 
+            - elasticsearch
+        volumes:
+            - ./config/logstash/pipeline:/usr/share/logstash/pipeline:ro
+            - ./config/logstash/templates:/usr/share/logstash/templates:ro
+            - ./config/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+            - ./config/logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro
+            - ./logs/suricata:/var/log/suricata:ro
+            - ./logs/zeek:/var/log/zeek/current:ro
+
+    kibana:
+        container_name: pcapmonkey_kibana
+        image: docker.elastic.co/kibana/kibana:7.17.3-arm64
+        hostname: kibana
+        environment:
+            ELASTICSEARCH_URL: http://elasticsearch:9200
+            ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+        links:
+            - elasticsearch
+        depends_on:
+            - elasticsearch
+        expose:
+            - "5601"
+        ports:
+            - "127.0.0.1:5601:5601"
+        healthcheck:
+            test: curl -fs http://localhost:5601/
+  
+    suricata:
+        container_name: pcapmonkey_suricata
+        image: jasonish/suricata:6.0.5-arm64v8
+        hostname: suricata
+        working_dir: /var/log/suricata
+        entrypoint:
+            - suricata
+            - --runmode=single
+            - -r
+            - /pcap/
+        volumes:
+            - ./config/suricata/etc:/etc/suricata:ro
+            - ./config/suricata/rules:/var/lib/suricata/rules/
+            - ./pcap:/pcap
+            - ./logs/suricata:/var/log/suricata
+
+#    zeek:
+#        container_name: pcapmonkey_zeek
+#        image: certego/zeek:4.0.2
+#        hostname: zeek
+#        working_dir: /var/log/zeek
+#        entrypoint:
+#            - /process_pcap_folder.sh
+#            - /pcap
+#            - local
+#            - "Site::local_nets += { 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 }"
+#        volumes:
+#            - ./config/zeek/site:/zeek/share/zeek/site
+#            - ./pcap:/pcap
+#            - ./logs/zeek:/var/log/zeek
+#            - ./logs/zeek/extracted_files:/opt/zeek/extracted
+#
+#    evtxtoelk:
+#        container_name: pcapmonkey_evtxtoelk
+#        image: certego/evtxtoelk:v1.1.0
+#        entrypoint:
+#            - python
+#            - evtxtoelk.py
+#            - /var/log/event_logs
+#            - elasticsearch:9200
+#            - -s
+#            - "2000"
+#            - -i
+#            - winlogbeat
+#        depends_on:
+#            - elasticsearch
+#        volumes:
+#            - ./import_event_logs:/var/log/event_logs:ro
+
+volumes:
+
+    elasticsearch_data:
+        driver: local
