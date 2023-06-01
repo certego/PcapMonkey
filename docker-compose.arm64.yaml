@@ -88,21 +88,21 @@ services:
             - ./pcap:/pcap
             - ./logs/suricata:/var/log/suricata
 
-#    zeek:
-#        container_name: pcapmonkey_zeek
-#        image: certego/zeek:4.0.2
-#        hostname: zeek
-#        working_dir: /var/log/zeek
-#        entrypoint:
-#            - /process_pcap_folder.sh
-#            - /pcap
-#            - local
-#            - "Site::local_nets += { 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 }"
-#        volumes:
-#            - ./config/zeek/site:/zeek/share/zeek/site
-#            - ./pcap:/pcap
-#            - ./logs/zeek:/var/log/zeek
-#            - ./logs/zeek/extracted_files:/opt/zeek/extracted
+    zeek:
+        container_name: pcapmonkey_zeek
+        image: certego/zeek:5.2.2-arm64v8
+        hostname: zeek
+        working_dir: /var/log/zeek
+        entrypoint:
+            - /process_pcap_folder.sh
+            - /pcap
+            - local
+            - "Site::local_nets += { 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 }"
+        volumes:
+            - ./config/zeek/site:/zeek/share/zeek/site
+            - ./pcap:/pcap
+            - ./logs/zeek:/var/log/zeek
+            - ./logs/zeek/extracted_files:/opt/zeek/extracted
 #
 #    evtxtoelk:
 #        container_name: pcapmonkey_evtxtoelk
