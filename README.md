@@ -22,7 +22,7 @@ Stay tuned for the upcoming GSoC! Join the [Honeynet Slack chat](https://gsoc-sl
 Install Docker-CE:
 - https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
-Then just clone this repo to your local machine, and you're ready to go. All the commands listed in this tutorial should be launched from whithin the root folder of this project.
+Then just clone this repo to your local machine, run `./prepare.sh` and you're ready to go. All the commands listed in this tutorial should be launched from whithin the root folder of this project.
 
 ## Uninstall
 To uninstall and remove all files, delete all containers with
