@@ -4,7 +4,7 @@ services:
 
     elasticsearch:
         container_name: pcapmonkey_elasticsearch
-        image: docker.elastic.co/elasticsearch/elasticsearch:7.17.3
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.17.28
         hostname: elasticsearch
         environment: 
             - node.name=pcapmonkey
@@ -29,7 +29,7 @@ services:
 
     filebeat:
         container_name: pcapmonkey_filebeat
-        image: docker.elastic.co/beats/filebeat:7.17.3
+        image: docker.elastic.co/beats/filebeat:7.17.28
         depends_on:
             - elasticsearch
         volumes:
@@ -40,7 +40,7 @@ services:
 
     logstash:
         container_name: pcapmonkey_logstash
-        image: docker.elastic.co/logstash/logstash:7.17.3
+        image: docker.elastic.co/logstash/logstash:7.17.28
         hostname: logstash
         environment:
             - "LS_JAVA_OPTS=-Xms512m -Xmx512m"
@@ -56,7 +56,7 @@ services:
 
     kibana:
         container_name: pcapmonkey_kibana
-        image: docker.elastic.co/kibana/kibana:7.17.3
+        image: docker.elastic.co/kibana/kibana:7.17.28
         hostname: kibana
         environment:
             ELASTICSEARCH_URL: http://elasticsearch:9200
@@ -74,7 +74,7 @@ services:
   
     suricata:
         container_name: pcapmonkey_suricata
-        image: jasonish/suricata:6.0.5
+        image: jasonish/suricata:6.0
         hostname: suricata
         working_dir: /var/log/suricata
         entrypoint:
