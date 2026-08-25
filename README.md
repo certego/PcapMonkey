@@ -67,6 +67,38 @@ If you don't want to waste time starting filebeat/elasticsearch/kibana go to `./
 
 Even if you'd like to use directly the log file I suggest keeping them in `.json` format and use `jq` utility to query them. You can read a pretty good `jq` primer [here](https://www.gibiansky.com/blog/command-line/jq-primer/index.html)
 
+### Elasticsearch configuration (`elasticsearch.yml`) and enabling X-Pack Security
+
+By default PcapMonkey does **not** ship a host-side `config/elasticsearch/elasticsearch.yml`. The `elasticsearch` service in `docker-compose.yaml` (and `docker-compose.arm64.yaml`) runs the official image `docker.elastic.co/elasticsearch/elasticsearch:7.17.28` with built-in defaults at `/usr/share/elasticsearch/config/elasticsearch.yml` inside the container, configured via the `environment:` block in compose.
+
+To enable X-Pack Security (`xpack.security.enabled: true`) as asked in [#34](https://github.com/certego/PcapMonkey/issues/34):
+
+1. Create `config/elasticsearch/elasticsearch.yml` on the host:
+   ```yaml
+   xpack.security.enabled: true
+   # optional, common companion settings:
+   # discovery.type: single-node
+   # xpack.security.transport.ssl.enabled: true
+   ```
+
+2. Mount it in `docker-compose.yaml` (and `docker-compose.arm64.yaml` on ARM64) under the `elasticsearch` service:
+   ```yaml
+   volumes:
+     - ./config/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+     - elasticsearch_data:/usr/share/elasticsearch/data
+   ```
+
+3. Restart the stack:
+   ```bash
+   sudo docker compose down && sudo docker compose up -d elasticsearch
+   ```
+
+Alternative without a file, add an environment variable to the `elasticsearch` service:
+```yaml
+environment:
+  - xpack.security.enabled=true
+```
+
 ## PcapMonkey Architecture
 ![Architecture](https://raw.githubusercontent.com/wiki/certego/PcapMonkey/assets/architecture.png)
 
