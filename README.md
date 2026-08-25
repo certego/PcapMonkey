@@ -69,34 +69,47 @@ Even if you'd like to use directly the log file I suggest keeping them in `.json
 
 ### Elasticsearch configuration (`elasticsearch.yml`) and enabling X-Pack Security
 
-By default PcapMonkey does **not** ship a host-side `config/elasticsearch/elasticsearch.yml`. The `elasticsearch` service in `docker-compose.yaml` (and `docker-compose.arm64.yaml`) runs the official image `docker.elastic.co/elasticsearch/elasticsearch:7.17.28` with built-in defaults at `/usr/share/elasticsearch/config/elasticsearch.yml` inside the container, configured via the `environment:` block in compose.
+By default PcapMonkey does **not** ship a host-side `config/elasticsearch/elasticsearch.yml`. The `elasticsearch` service in `docker-compose.yaml` (`docker.elastic.co/elasticsearch/elasticsearch:7.17.28`, `7.17.28-arm64` on ARM64) runs with built-in defaults at `/usr/share/elasticsearch/config/elasticsearch.yml` inside the container (`cluster.name: "docker-cluster"`, `network.host: 0.0.0.0`, `discovery.type: single-node` via the `environment:` block).
 
 To enable X-Pack Security (`xpack.security.enabled: true`) as asked in [#34](https://github.com/certego/PcapMonkey/issues/34):
 
-1. Create `config/elasticsearch/elasticsearch.yml` on the host:
-   ```yaml
-   xpack.security.enabled: true
-   # optional, common companion settings:
-   # discovery.type: single-node
-   # xpack.security.transport.ssl.enabled: true
-   ```
-
-2. Mount it in `docker-compose.yaml` (and `docker-compose.arm64.yaml` on ARM64) under the `elasticsearch` service:
-   ```yaml
-   volumes:
-     - ./config/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
-     - elasticsearch_data:/usr/share/elasticsearch/data
-   ```
-
-3. Restart the stack:
+1. Create the file on the host (must exist before `docker compose up`, otherwise Docker creates a directory):
    ```bash
-   sudo docker compose down && sudo docker compose up -d elasticsearch
+   mkdir -p config/elasticsearch
+   cat > config/elasticsearch/elasticsearch.yml <<'EOF'
+   cluster.name: "docker-cluster"
+   network.host: 0.0.0.0
+   discovery.type: single-node
+   xpack.security.enabled: true
+   EOF
+   chmod 644 config/elasticsearch/elasticsearch.yml
    ```
 
-Alternative without a file, add an environment variable to the `elasticsearch` service:
+   Copy the three defaults above - mounting a file with only `xpack.security.enabled: true` hides the image defaults and Elasticsearch may not bind. For a single-node setup TLS is not required; for multi-node you must add TLS (see Elastic minimal security guide).
+
+2. Mount it in `docker-compose.yaml` (and `docker-compose.arm64.yaml` on ARM64) under `services.elasticsearch.volumes` (keep the existing data volume):
+   ```yaml
+   services:
+     elasticsearch:
+       volumes:
+         - ./config/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+         - elasticsearch_data:/usr/share/elasticsearch/data
+   ```
+
+3. Restart the whole stack (security affects filebeat, kibana, logstash and evtxtoelk which all talk to `http://elasticsearch:9200` without credentials today):
+   ```bash
+   sudo docker compose down && sudo docker compose up -d
+   ```
+   After enabling security you must set a password (`ELASTIC_PASSWORD` / `elasticsearch-setup-passwords`) and update `output.elasticsearch.username/password` in Filebeat/Logstash and Kibana. Without this the pipeline will return `security_exception` and appear down.
+
+Alternative without a file, add to the existing `environment:` list (same password caveat applies):
 ```yaml
-environment:
-  - xpack.security.enabled=true
+services:
+  elasticsearch:
+    environment:
+      - node.name=pcapmonkey
+      - discovery.type=single-node
+      - xpack.security.enabled=true
 ```
 
 ## PcapMonkey Architecture
